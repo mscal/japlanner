@@ -135,7 +135,7 @@ const Page: NextPage = () => {
           >
             <Stack direction="row" justifyContent="space-between" spacing={4}>
               <div>
-                <Typography variant="h4">To-do's</Typography>
+                <Typography variant="h4">To-dos</Typography>
               </div>
             </Stack>
           </Stack>
