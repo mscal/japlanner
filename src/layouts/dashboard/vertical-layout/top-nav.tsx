@@ -105,7 +105,9 @@ export const TopNav: FC<TopNavProps> = (props) => {
         >
           {navItems.map((item, index) => {
             return (
-              <Button onClick={() => router.push(item.path)}>{item.icon}</Button>
+              <Button key={index} onClick={() => router.push(item.path)}>
+                {item.icon}
+              </Button>
             );
           })}
         </Stack>
