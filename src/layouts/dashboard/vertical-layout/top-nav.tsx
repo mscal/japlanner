@@ -14,6 +14,8 @@ import { ContactsButton } from "../contacts-button";
 import { LanguageSwitch } from "../language-switch";
 import { NotificationsButton } from "../notifications-button";
 import { SearchButton } from "../search-button";
+import { SettingsButton } from "src/components/settings/settings-button";
+import { Button } from "@mui/material";
 
 const TOP_NAV_HEIGHT: number = 64;
 const SIDE_NAV_WIDTH: number = 280;
@@ -21,6 +23,29 @@ const SIDE_NAV_WIDTH: number = 280;
 interface TopNavProps {
   onMobileNavOpen?: () => void;
 }
+
+const navItems = [
+  {
+    title: "Trip Overview",
+    path: "/",
+    icon: <img src="/assets/japan/icons8-asia.svg" width={"30"} />,
+  },
+  {
+    title: "Schedule",
+    path: "/schedule",
+    icon: <img src="/assets/japan/icons8-schedule.svg" width={"30"} />,
+  },
+  {
+    title: "Todos",
+    path: "/todos",
+    icon: <img src="/assets/japan/icons8-task-completed.svg" width={"30"} />,
+  },
+  {
+    title: "Tickets",
+    path: "/tickets",
+    icon: <img src="/assets/japan/icons8-train-ticket.svg" width={"30"} />,
+  },
+];
 
 export const TopNav: FC<TopNavProps> = (props) => {
   const { onMobileNavOpen, ...other } = props;
@@ -37,7 +62,7 @@ export const TopNav: FC<TopNavProps> = (props) => {
         left: {
           lg: `${SIDE_NAV_WIDTH}px`,
         },
-        top: 0,
+        bottom: 0,
         width: {
           lg: `calc(100% - ${SIDE_NAV_WIDTH}px)`,
         },
@@ -64,8 +89,20 @@ export const TopNav: FC<TopNavProps> = (props) => {
             </IconButton>
           )}
         </Stack>
+        <Stack
+          sx={{ display: { lg: "none", sm: "flex" } }}
+          alignItems="center"
+          direction="row"
+          spacing={2}
+        >
+          {navItems.map((items) => {
+            return <Button href={items.path}>{items.icon}</Button>;
+          })}
+        </Stack>
         <Stack alignItems="center" direction="row" spacing={2}>
+          {/* <SettingsButton /> */}
           <ContactsButton />
+
           {/* <AccountButton /> */}
         </Stack>
       </Stack>

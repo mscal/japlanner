@@ -23,28 +23,28 @@ const useContacts = (): Contact[] => {
   return [
     {
       id: "5e8891ab188cd2855e6029b7",
-      avatar: "/assets/avatars/avatar-alcides-antonio.png",
+      avatar: "/assets/avatars/mike.png",
       isActive: true,
       lastActivity: now.getTime(),
       name: "Mike",
     },
     {
       id: "5e887a62195cc5aef7e8ca5d",
-      avatar: "/assets/avatars/avatar-marcus-finn.png",
+      avatar: "/assets/avatars/fee.png",
       isActive: false,
       lastActivity: now.getTime(),
       name: "Fee",
     },
     {
       id: "5e887b209c28ac3dd97f6db5",
-      avatar: "/assets/avatars/avatar-fran-perez.png",
+      avatar: "/assets/avatars/nat.png",
       isActive: true,
       lastActivity: now.getTime(),
       name: "Nat",
     },
     {
       id: "5e887b7602bdbc4dbb234b27",
-      avatar: "/assets/avatars/avatar-jie-yan-song.png",
+      avatar: "/assets/avatars/meg.png",
       isActive: true,
       lastActivity: now.getTime(),
       name: "Meg",

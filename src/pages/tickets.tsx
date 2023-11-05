@@ -6,10 +6,12 @@ import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import SvgIcon from "@mui/material/SvgIcon";
 import Typography from "@mui/material/Typography";
+import CardMedia from "@mui/material/CardMedia";
 
 import { Seo } from "src/components/seo";
 import { useSettings } from "src/hooks/use-settings";
 import { Layout as DashboardLayout } from "src/layouts/dashboard";
+import { Card, CardActionArea, CardActions, CardContent } from "@mui/material";
 
 const Page: NextPage = () => {
   const settings = useSettings();
@@ -35,30 +37,30 @@ const Page: NextPage = () => {
               <div>
                 <Typography variant="h4">Tickets</Typography>
               </div>
-              <div>
-                <Stack direction="row" spacing={4}>
-                  <Button
-                    startIcon={
-                      <SvgIcon>
-                        <PlusIcon />
-                      </SvgIcon>
-                    }
-                    variant="contained"
-                  >
-                    Action
-                  </Button>
-                </Stack>
-              </div>
             </Stack>
-            <Box
-              sx={{
-                borderColor: "neutral.300",
-                borderStyle: "dashed",
-                borderWidth: 1,
-                height: 300,
-                p: "4px",
-              }}
-            />
+
+            <Card sx={{ maxWidth: 500 }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  src="/assets/images/gundam.jpg"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Gundam Factory
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Yokohama
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Share
+                </Button>
+              </CardActions>
+            </Card>
           </Stack>
         </Container>
       </Box>

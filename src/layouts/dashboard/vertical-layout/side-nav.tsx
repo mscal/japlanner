@@ -234,7 +234,7 @@ export const SideNav: FC<SideNavProps> = (props) => {
             <Button
               component="a"
               fullWidth
-              href={paths.docs}
+              href={"https://www.google.com/maps/place/Tokyo,+Japan/"}
               startIcon={
                 <SvgIcon>
                   <File04Icon />

@@ -33,37 +33,25 @@ export const useSections = () => {
           {
             title: "Trip Overview",
             path: paths.index,
-            icon: (
-              <SvgIcon fontSize="small">
-                <HomeSmileIcon />
-              </SvgIcon>
-            ),
+            icon: <img src="/assets/japan/icons8-asia.svg" width={"40"} />,
           },
           {
             title: "Schedule",
             path: paths.schedule,
-            icon: (
-              <SvgIcon fontSize="small">
-                <File01Icon />
-              </SvgIcon>
-            ),
+            icon: <img src="/assets/japan/icons8-schedule.svg" width={"40"} />,
           },
           {
             title: "Todos",
             path: paths.todos,
             icon: (
-              <SvgIcon fontSize="small">
-                <File01Icon />
-              </SvgIcon>
+              <img src="/assets/japan/icons8-task-completed.svg" width={"40"} />
             ),
           },
           {
             title: "Tickets",
             path: paths.tickets,
             icon: (
-              <SvgIcon fontSize="small">
-                <File01Icon />
-              </SvgIcon>
+              <img src="/assets/japan/icons8-train-ticket.svg" width={"40"} />
             ),
           },
         ],

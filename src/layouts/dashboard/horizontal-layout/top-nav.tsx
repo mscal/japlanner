@@ -179,7 +179,7 @@ export const TopNav: FC<TopNavProps> = (props) => {
         color: "var(--nav-color)",
         left: 0,
         position: "sticky",
-        top: 0,
+        bottom: 0,
         zIndex: (theme) => theme.zIndex.appBar,
       }}
     >
@@ -221,7 +221,6 @@ export const TopNav: FC<TopNavProps> = (props) => {
         </Stack>
         <Stack alignItems="center" direction="row" spacing={2}>
           <ContactsButton />
-          {/* <AccountButton /> */}
         </Stack>
       </Stack>
       {mdUp && (
