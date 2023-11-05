@@ -44,7 +44,7 @@ const CustomApp = (props: CustomAppProps) => {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <title>Devias Kit PRO</title>
+        <title>Japlanner 2023</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -75,6 +75,7 @@ const CustomApp = (props: CustomAppProps) => {
                   </Head>
                   <RTL direction={settings.direction}>
                     <CssBaseline />
+                    {/* <SettingsButton onClick={settings.handleDrawerOpen} /> */}
                     {getLayout(<Component {...pageProps} />)}
                     <SettingsDrawer
                       canReset={settings.isCustom}

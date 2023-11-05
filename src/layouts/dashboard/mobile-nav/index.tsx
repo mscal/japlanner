@@ -20,6 +20,8 @@ import type { NavColor } from "src/types/settings";
 import type { Section } from "../config";
 import { TenantSwitch } from "../tenant-switch";
 import { MobileNavSection } from "./mobile-nav-section";
+import { SettingsButton } from "src/components/settings/settings-button";
+import { useSettings } from "src/hooks/use-settings";
 
 const MOBILE_NAV_WIDTH: number = 280;
 
@@ -122,6 +124,7 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
   const { color = "evident", open, onClose, sections = [] } = props;
   const pathname = usePathname();
   const cssVars = useCssVars(color);
+  const { handleDrawerOpen } = useSettings();
 
   return (
     <Drawer
@@ -186,7 +189,12 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
               />
             ))}
           </Stack>
+
           <Box sx={{ p: 3 }}>
+            {" "}
+            <Stack mb={2}>
+              <SettingsButton onClick={handleDrawerOpen} />
+            </Stack>
             <Typography color="neutral.400" variant="subtitle1">
               Lost?
             </Typography>

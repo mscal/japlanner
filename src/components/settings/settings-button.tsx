@@ -13,17 +13,16 @@ interface SettingsButtonProps {
 export const SettingsButton: FC<SettingsButtonProps> = (props) => (
   <Tooltip title="Settings">
     <Box
-    // sx={{
-    //   backgroundColor: "background.paper",
-    //   borderRadius: "50%",
-    //   bottom: 0,
-    //   boxShadow: 16,
-    //   margin: (theme) => theme.spacing(4),
-    //   // position: 'fixed',
-    //   // right: 0,
-    //   zIndex: (theme) => theme.zIndex.speedDial,
-    // }}
-    // {...props}
+      sx={{
+        // backgroundColor: "background.paper",
+        borderRadius: "50%",
+        bottom: 10,
+        // boxShadow: 16,
+        // margin: (theme) => theme.spacing(4),
+        // right: 0,
+        zIndex: (theme) => theme.zIndex.speedDial,
+      }}
+      {...props}
     >
       <ButtonBase
         sx={{
