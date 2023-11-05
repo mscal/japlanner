@@ -12,6 +12,7 @@ import { Seo } from "src/components/seo";
 import { useSettings } from "src/hooks/use-settings";
 import { Layout as DashboardLayout } from "src/layouts/dashboard";
 import { Card, CardActionArea, CardActions, CardContent } from "@mui/material";
+import router, { Router } from "next/router";
 
 const Page: NextPage = () => {
   const settings = useSettings();
@@ -35,32 +36,9 @@ const Page: NextPage = () => {
           >
             <Stack direction="row" justifyContent="space-between" spacing={4}>
               <div>
-                <Typography variant="h4">Tickets</Typography>
+                <Typography variant="h4">Gundam Factory Tickets</Typography>
               </div>
             </Stack>
-
-            <Card sx={{ maxWidth: 500 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="300"
-                  src="/assets/images/gundam.jpg"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Gundam Factory
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Yokohama
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-              </CardActions>
-            </Card>
           </Stack>
         </Container>
       </Box>

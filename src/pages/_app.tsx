@@ -45,6 +45,7 @@ const CustomApp = (props: CustomAppProps) => {
     <CacheProvider value={emotionCache}>
       <Head>
         <title>Japlanner 2023</title>
+        <meta name="robots" content="noindex" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <LocalizationProvider dateAdapter={AdapterDateFns}>

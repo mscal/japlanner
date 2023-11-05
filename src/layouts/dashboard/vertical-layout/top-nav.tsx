@@ -1,4 +1,5 @@
-import type { FC } from "react";
+import { useMemo, type FC } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Menu01Icon from "@untitled-ui/icons-react/build/esm/Menu01";
 import { alpha } from "@mui/system/colorManipulator";
@@ -15,7 +16,9 @@ import { LanguageSwitch } from "../language-switch";
 import { NotificationsButton } from "../notifications-button";
 import { SearchButton } from "../search-button";
 import { SettingsButton } from "src/components/settings/settings-button";
-import { Button } from "@mui/material";
+import { Button, Link } from "@mui/material";
+import { useSections } from "../config";
+import router from "next/router";
 
 const TOP_NAV_HEIGHT: number = 64;
 const SIDE_NAV_WIDTH: number = 280;
@@ -24,32 +27,37 @@ interface TopNavProps {
   onMobileNavOpen?: () => void;
 }
 
-const navItems = [
-  {
-    title: "Trip Overview",
-    path: "/",
-    icon: <img src="/assets/japan/icons8-asia.svg" width={"30"} />,
-  },
-  {
-    title: "Schedule",
-    path: "/schedule",
-    icon: <img src="/assets/japan/icons8-schedule.svg" width={"30"} />,
-  },
-  {
-    title: "Todos",
-    path: "/todos",
-    icon: <img src="/assets/japan/icons8-task-completed.svg" width={"30"} />,
-  },
-  {
-    title: "Tickets",
-    path: "/tickets",
-    icon: <img src="/assets/japan/icons8-train-ticket.svg" width={"30"} />,
-  },
-];
-
 export const TopNav: FC<TopNavProps> = (props) => {
   const { onMobileNavOpen, ...other } = props;
   const lgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up("lg"));
+
+  const navItems = useMemo(
+    () => [
+      {
+        title: "Trip Overview",
+        path: "/",
+        icon: <img src="/assets/japan/icons8-asia.svg" width={"30"} />,
+      },
+      {
+        title: "Schedule",
+        path: "/schedule",
+        icon: <img src="/assets/japan/icons8-schedule.svg" width={"30"} />,
+      },
+      {
+        title: "Todos",
+        path: "/todos",
+        icon: (
+          <img src="/assets/japan/icons8-task-completed.svg" width={"30"} />
+        ),
+      },
+      {
+        title: "Tickets",
+        path: "/tickets",
+        icon: <img src="/assets/japan/icons8-train-ticket.svg" width={"30"} />,
+      },
+    ],
+    []
+  );
 
   return (
     <Box
@@ -95,11 +103,9 @@ export const TopNav: FC<TopNavProps> = (props) => {
           direction="row"
           spacing={2}
         >
-          {navItems.map((items, index) => {
+          {navItems.map((item, index) => {
             return (
-              <Button key={index} href={items.path}>
-                {items.icon}
-              </Button>
+              <Button onClick={() => router.push(item.path)}>{item.icon}</Button>
             );
           })}
         </Stack>
