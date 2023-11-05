@@ -13,10 +13,7 @@ import { Seo } from "src/components/seo";
 import { useSettings } from "src/hooks/use-settings";
 import { Layout as DashboardLayout } from "src/layouts/dashboard";
 import { OverviewBanner } from "src/sections/dashboard/overview/overview-banner";
-import {
-  DashboardCards,
-  OverviewDoneTasks,
-} from "src/sections/dashboard/overview/overview-done-tasks";
+import { DashboardCards } from "src/sections/dashboard/overview/dashboard-cards";
 import { OverviewEvents } from "src/sections/dashboard/overview/overview-events";
 import { OverviewInbox } from "src/sections/dashboard/overview/overview-inbox";
 import { OverviewTransactions } from "src/sections/dashboard/overview/overview-transactions";
