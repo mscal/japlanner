@@ -1,25 +1,17 @@
-import type { NextPage } from "next";
-import PlusIcon from "@untitled-ui/icons-react/build/esm/Plus";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import SvgIcon from "@mui/material/SvgIcon";
 import Typography from "@mui/material/Typography";
-
+import type { NextPage } from "next";
+import { useCallback } from "react";
+import toast from "react-hot-toast";
 import { Seo } from "src/components/seo";
 import { useSettings } from "src/hooks/use-settings";
 import { Layout as DashboardLayout } from "src/layouts/dashboard";
-import { TaskModal } from "src/sections/dashboard/overview/task-modal";
 import { TaskChecklist } from "src/sections/dashboard/overview/task-modal/task-checklist";
-import { useCallback } from "react";
-import { useDispatch, useSelector } from "src/store";
-import { thunks } from "src/thunks/kanban";
-import toast from "react-hot-toast";
 
 const Page: NextPage = () => {
   const settings = useSettings();
-  const dispatch = useDispatch();
 
   const task = [
     {
@@ -48,79 +40,79 @@ const Page: NextPage = () => {
   const handleCheckItemAdd = useCallback(
     async (checklistId: string, name: string): Promise<void> => {
       try {
-        await dispatch(
-          thunks.addCheckItem({
-            taskId: task!.id,
-            checklistId,
-            name,
-          })
-        );
+        // await dispatch(
+        //   thunks.addCheckItem({
+        //     taskId: task!.id,
+        //     checklistId,
+        //     name,
+        //   })
+        // );
       } catch (err) {
         console.error(err);
         toast.error("Something went wrong!");
       }
     },
-    [dispatch, task]
+    [task]
   );
 
   const handleCheckItemDelete = useCallback(
     async (checklistId: string, checkItemId: string): Promise<void> => {
       try {
-        await dispatch(
-          thunks.deleteCheckItem({
-            taskId: task!.id,
-            checklistId,
-            checkItemId,
-          })
-        );
+        // await dispatch(
+        //   thunks.deleteCheckItem({
+        //     taskId: task!.id,
+        //     checklistId,
+        //     checkItemId,
+        //   })
+        // );
       } catch (err) {
         console.error(err);
         toast.error("Something went wrong!");
       }
     },
-    [dispatch, task]
+    [task]
   );
 
   const handleCheckItemCheck = useCallback(
     async (checklistId: string, checkItemId: string): Promise<void> => {
       try {
-        await dispatch(
-          thunks.updateCheckItem({
-            taskId: task!.id,
-            checklistId,
-            checkItemId,
-            update: {
-              state: "complete",
-            },
-          })
-        );
+        // await dispatch(
+        //   thunks.updateCheckItem({
+        //     taskId: task!.id,
+        //     checklistId,
+        //     checkItemId,
+        //     update: {
+        //       state: "complete",
+        //     },
+        //   })
+        // );
       } catch (err) {
         console.error(err);
         toast.error("Something went wrong!");
       }
     },
-    [dispatch, task]
+    [task]
   );
 
   const handleCheckItemUncheck = useCallback(
     async (checklistId: string, checkItemId: string): Promise<void> => {
       try {
-        await dispatch(
-          thunks.updateCheckItem({
-            taskId: task!.id,
-            checklistId,
-            checkItemId,
-            update: {
-              state: "incomplete",
-            },
-          })
-        );
+        // await dispatch(
+        //   thunks.updateCheckItem({
+        //     taskId: task!.id,
+        //     checklistId,
+        //     checkItemId,
+        //     update: {
+        //       state: "incomplete",
+        //     },
+        //   })
+        // );
       } catch (err) {
         console.error(err);
         toast.error("Something went wrong!");
       }
     },
-    [dispatch, task]
+    [task]
   );
 
   return (
@@ -150,21 +142,21 @@ const Page: NextPage = () => {
           <TaskChecklist
             key={2}
             checklist={task}
-            onCheckItemAdd={(name) => handleCheckItemAdd(2, name)}
+            onCheckItemAdd={(name) => handleCheckItemAdd("2", name)}
             onCheckItemDelete={(checkItemId) =>
-              handleCheckItemDelete(2, checkItemId)
+              handleCheckItemDelete("2", checkItemId)
             }
             onCheckItemCheck={(checkItemId) =>
-              handleCheckItemCheck(2, checkItemId)
+              handleCheckItemCheck("2", checkItemId)
             }
             onCheckItemUncheck={(checkItemId) =>
-              handleCheckItemUncheck(2, checkItemId)
+              handleCheckItemUncheck("2", checkItemId)
             }
-            onCheckItemRename={(checkItemId, name) =>
-              handleCheckItemRename(2, checkItemId, name)
-            }
-            onDelete={() => handleChecklistDelete(2)}
-            onRename={(name) => handleChecklistRename(2, name)}
+            // onCheckItemRename={(checkItemId, name) =>
+            //   handleCheckItemRename(2, checkItemId, name)
+            // }
+            // onDelete={() => handleChecklistDelete(2)}
+            // onRename={(name) => handleChecklistRename(2, name)}
           />
         </Container>
       </Box>

@@ -15,15 +15,13 @@ import Stack from "@mui/material/Stack";
 import SvgIcon from "@mui/material/SvgIcon";
 import Typography from "@mui/material/Typography";
 
-import type { CheckItem, Checklist } from "src/types/kanban";
-
 import { TaskCheckItem } from "./task-check-item";
 import { TaskCheckItemAdd } from "./task-check-item-add";
 
-const calculateProgress = (checkItems: CheckItem[]): number => {
+const calculateProgress = (checkItems: any): number => {
   const totalCheckItems = checkItems?.length;
   const completedCheckItems = checkItems?.filter(
-    (checkItem) => checkItem.state === "complete"
+    (checkItem: any) => checkItem.state === "complete"
   ).length;
   const progress =
     totalCheckItems === 0 ? 100 : (completedCheckItems / totalCheckItems) * 100;
@@ -32,7 +30,7 @@ const calculateProgress = (checkItems: CheckItem[]): number => {
 };
 
 interface TaskChecklistProps {
-  checklist: Checklist;
+  checklist: any;
   onCheckItemAdd?: (name: string) => void;
   onCheckItemDelete?: (checkItemId: string) => void;
   onCheckItemCheck?: (checkItemId: string) => void;
@@ -44,7 +42,6 @@ interface TaskChecklistProps {
 
 export const TaskChecklist: FC<TaskChecklistProps> = (props) => {
   const {
-    checklist,
     onCheckItemAdd,
     onCheckItemDelete,
     onCheckItemCheck,
@@ -58,6 +55,8 @@ export const TaskChecklist: FC<TaskChecklistProps> = (props) => {
   const [isRenaming, setIsRenaming] = useState<boolean>(false);
   // The current check item that is being renamed
   const [checkItemId, setCheckItemId] = useState<string | null>(null);
+
+  const checklist = { checkItems: [{ id: 1 }], name: "lol" };
 
   const handleNameReset = useCallback(() => {
     setNameCopy(checklist.name);
@@ -196,13 +195,13 @@ export const TaskChecklist: FC<TaskChecklistProps> = (props) => {
       {hasCheckItems && (
         <>
           <Stack divider={<Divider />} spacing={1}>
-            {checklist.checkItems.map((checkItem) => {
+            {checklist.checkItems.map((checkItem: any) => {
               const isRenaming = checkItemId === checkItem.id;
 
               return (
                 <TaskCheckItem
                   key={checkItem.id}
-                  checkItem={checkItem}
+                  // checkItem={[]}
                   onCheck={() => onCheckItemCheck?.(checkItem.id)}
                   onDelete={() => onCheckItemDelete?.(checkItem.id)}
                   onRenameCancel={handleCheckItemRenameCancel}

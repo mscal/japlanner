@@ -95,8 +95,12 @@ export const TopNav: FC<TopNavProps> = (props) => {
           direction="row"
           spacing={2}
         >
-          {navItems.map((items) => {
-            return <Button href={items.path}>{items.icon}</Button>;
+          {navItems.map((items, index) => {
+            return (
+              <Button key={index} href={items.path}>
+                {items.icon}
+              </Button>
+            );
           })}
         </Stack>
         <Stack alignItems="center" direction="row" spacing={2}>

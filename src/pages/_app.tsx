@@ -23,7 +23,6 @@ import {
 import { useNprogress } from "src/hooks/use-nprogress";
 import { createTheme } from "src/theme";
 import { createEmotionCache } from "src/utils/create-emotion-cache";
-import { store } from "src/store";
 
 // Remove if locales are not used
 import "src/locales/i18n";
@@ -48,65 +47,60 @@ const CustomApp = (props: CustomAppProps) => {
         <title>Devias Kit PRO</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <ReduxProvider store={store}>
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
-          <SettingsProvider>
-            <SettingsConsumer>
-              {(settings) => {
-                // Prevent theme flicker when restoring custom settings from browser storage
-                if (!settings.isInitialized) {
-                  // return null;
-                }
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <SettingsProvider>
+          <SettingsConsumer>
+            {(settings) => {
+              // Prevent theme flicker when restoring custom settings from browser storage
+              if (!settings.isInitialized) {
+                // return null;
+              }
 
-                const theme = createTheme({
-                  colorPreset: settings.colorPreset,
-                  contrast: settings.contrast,
-                  direction: settings.direction,
-                  paletteMode: settings.paletteMode,
-                  responsiveFontSizes: settings.responsiveFontSizes,
-                });
+              const theme = createTheme({
+                colorPreset: settings.colorPreset,
+                contrast: settings.contrast,
+                direction: settings.direction,
+                paletteMode: settings.paletteMode,
+                responsiveFontSizes: settings.responsiveFontSizes,
+              });
 
-                return (
-                  <ThemeProvider theme={theme}>
-                    <Head>
-                      <meta
-                        name="color-scheme"
-                        content={settings.paletteMode}
-                      />
-                      <meta
-                        name="theme-color"
-                        content={theme.palette.neutral[900]}
-                      />
-                    </Head>
-                    <RTL direction={settings.direction}>
-                      <CssBaseline />
-                      {getLayout(<Component {...pageProps} />)}
-                      <SettingsDrawer
-                        canReset={settings.isCustom}
-                        onClose={settings.handleDrawerClose}
-                        onReset={settings.handleReset}
-                        onUpdate={settings.handleUpdate}
-                        open={settings.openDrawer}
-                        values={{
-                          colorPreset: settings.colorPreset,
-                          contrast: settings.contrast,
-                          direction: settings.direction,
-                          paletteMode: settings.paletteMode,
-                          responsiveFontSizes: settings.responsiveFontSizes,
-                          stretch: settings.stretch,
-                          layout: settings.layout,
-                          navColor: settings.navColor,
-                        }}
-                      />
-                      <Toaster />
-                    </RTL>
-                  </ThemeProvider>
-                );
-              }}
-            </SettingsConsumer>
-          </SettingsProvider>
-        </LocalizationProvider>
-      </ReduxProvider>
+              return (
+                <ThemeProvider theme={theme}>
+                  <Head>
+                    <meta name="color-scheme" content={settings.paletteMode} />
+                    <meta
+                      name="theme-color"
+                      content={theme.palette.neutral[900]}
+                    />
+                  </Head>
+                  <RTL direction={settings.direction}>
+                    <CssBaseline />
+                    {getLayout(<Component {...pageProps} />)}
+                    <SettingsDrawer
+                      canReset={settings.isCustom}
+                      onClose={settings.handleDrawerClose}
+                      onReset={settings.handleReset}
+                      onUpdate={settings.handleUpdate}
+                      open={settings.openDrawer}
+                      values={{
+                        colorPreset: settings.colorPreset,
+                        contrast: settings.contrast,
+                        direction: settings.direction,
+                        paletteMode: settings.paletteMode,
+                        responsiveFontSizes: settings.responsiveFontSizes,
+                        stretch: settings.stretch,
+                        layout: settings.layout,
+                        navColor: settings.navColor,
+                      }}
+                    />
+                    <Toaster />
+                  </RTL>
+                </ThemeProvider>
+              );
+            }}
+          </SettingsConsumer>
+        </SettingsProvider>
+      </LocalizationProvider>
     </CacheProvider>
   );
 };

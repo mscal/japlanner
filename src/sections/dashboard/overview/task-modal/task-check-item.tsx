@@ -9,10 +9,7 @@ import Input from "@mui/material/Input";
 import Stack from "@mui/material/Stack";
 import SvgIcon from "@mui/material/SvgIcon";
 
-import type { CheckItem } from "src/types/kanban";
-
 interface TaskCheckItemProps {
-  checkItem: CheckItem;
   isRenaming?: boolean;
   onCheck?: () => void;
   onDelete?: () => void;
@@ -24,7 +21,6 @@ interface TaskCheckItemProps {
 
 export const TaskCheckItem: FC<TaskCheckItemProps> = (props) => {
   const {
-    checkItem,
     isRenaming = false,
     onCheck,
     onDelete,
@@ -34,18 +30,18 @@ export const TaskCheckItem: FC<TaskCheckItemProps> = (props) => {
     onUncheck,
     ...other
   } = props;
-  const [nameCopy, setNameCopy] = useState<string>(checkItem.name);
+  const [nameCopy, setNameCopy] = useState<string>("");
 
   const handleNameReset = useCallback(() => {
-    setNameCopy(checkItem.name);
-  }, [checkItem]);
+    setNameCopy("");
+  }, []);
 
   useEffect(
     () => {
       handleNameReset();
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [checkItem]
+    []
   );
 
   const handleCheckChange = useCallback(
@@ -67,15 +63,15 @@ export const TaskCheckItem: FC<TaskCheckItemProps> = (props) => {
   );
 
   const handleRenameCancel = useCallback((): void => {
-    setNameCopy(checkItem.name);
+    setNameCopy("");
     onRenameCancel?.();
-  }, [checkItem, onRenameCancel]);
+  }, [onRenameCancel]);
 
   const handleRenameComplete = useCallback(async (): Promise<void> => {
     onRenameComplete?.(nameCopy);
   }, [nameCopy, onRenameComplete]);
 
-  const isChecked = checkItem.state === "complete";
+  const isChecked = true;
   const isDashed = !isRenaming && isChecked;
 
   return (
