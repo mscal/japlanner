@@ -1,18 +1,18 @@
-import type { FC } from 'react';
-import PropTypes from 'prop-types';
-import ChevronDownIcon from '@untitled-ui/icons-react/build/esm/ChevronDown';
-import type { SxProps } from '@mui/system/styleFunctionSx';
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import Stack from '@mui/material/Stack';
-import SvgIcon from '@mui/material/SvgIcon';
-import Typography from '@mui/material/Typography';
+import type { FC } from "react";
+import PropTypes from "prop-types";
+import ChevronDownIcon from "@untitled-ui/icons-react/build/esm/ChevronDown";
+import type { SxProps } from "@mui/system/styleFunctionSx";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import SvgIcon from "@mui/material/SvgIcon";
+import Typography from "@mui/material/Typography";
 
-import { usePopover } from 'src/hooks/use-popover';
+import { usePopover } from "src/hooks/use-popover";
 
-import { TenantPopover } from './tenant-popover';
+import { TenantPopover } from "./tenant-popover";
 
-const tenants: string[] = ['Devias', 'Acme Corp'];
+const tenants: string[] = ["Devias", "Acme Corp"];
 
 interface TenantSwitchProps {
   sx?: SxProps;
@@ -23,33 +23,17 @@ export const TenantSwitch: FC<TenantSwitchProps> = (props) => {
 
   return (
     <>
-      <Stack
-        alignItems="center"
-        direction="row"
-        spacing={2}
-        {...props}
-      >
+      <Stack alignItems="center" direction="row" spacing={2} {...props}>
         <Box sx={{ flexGrow: 1 }}>
-          <Typography
-            color="inherit"
-            variant="h6"
-          >
-            Devias
+          <Typography color="inherit" variant="h6">
+            Japlanner
           </Typography>
-          <Typography
-            color="neutral.400"
-            variant="body2"
-          >
+          <Typography color="neutral.400" variant="body2">
             Production
           </Typography>
         </Box>
-        <IconButton
-          onClick={popover.handleOpen}
-          ref={popover.anchorRef}
-        >
-          <SvgIcon sx={{ fontSize: 16 }}>
-            <ChevronDownIcon />
-          </SvgIcon>
+        <IconButton onClick={popover.handleOpen} ref={popover.anchorRef}>
+          <SvgIcon sx={{ fontSize: 16 }}>{/* <ChevronDownIcon /> */}</SvgIcon>
         </IconButton>
       </Stack>
       <TenantPopover
@@ -65,5 +49,5 @@ export const TenantSwitch: FC<TenantSwitchProps> = (props) => {
 
 TenantSwitch.propTypes = {
   // @ts-ignore
-  sx: PropTypes.object
+  sx: PropTypes.object,
 };
