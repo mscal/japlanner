@@ -220,10 +220,8 @@ export const TopNav: FC<TopNavProps> = (props) => {
           <TenantSwitch />
         </Stack>
         <Stack alignItems="center" direction="row" spacing={2}>
-          <LanguageSwitch />
-          <NotificationsButton />
           <ContactsButton />
-          <AccountButton />
+          {/* <AccountButton /> */}
         </Stack>
       </Stack>
       {mdUp && (

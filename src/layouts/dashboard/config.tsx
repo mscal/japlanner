@@ -31,7 +31,7 @@ export const useSections = () => {
       {
         items: [
           {
-            title: t(tokens.nav.overview),
+            title: "Trip Overview",
             path: paths.index,
             icon: (
               <SvgIcon fontSize="small">

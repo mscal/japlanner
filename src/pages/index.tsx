@@ -53,20 +53,6 @@ const Page: NextPage = () => {
                 <div>
                   <Typography variant="h4">Overview</Typography>
                 </div>
-                <div>
-                  <Stack direction="row" spacing={4}>
-                    <Button
-                      startIcon={
-                        <SvgIcon>
-                          <PlusIcon />
-                        </SvgIcon>
-                      }
-                      variant="contained"
-                    >
-                      New Dashboard
-                    </Button>
-                  </Stack>
-                </div>
               </Stack>
             </Grid>
             <Grid xs={12} md={4}>
@@ -79,17 +65,15 @@ const Page: NextPage = () => {
             </Grid>
             <Grid xs={12} md={4}>
               <DashboardCards
-                title={"Depature"}
-                main={"17th Nov - 6am"}
+                title={"Arrival"}
+                main={"17th Nov - 8pm"}
                 link={""}
                 icon={
                   <img src="/assets/japan/icons8-plane-land.svg" width={48} />
                 }
               />
             </Grid>
-            <Grid xs={12} md={4}>
-              <OverviewOpenTickets amount={5} />
-            </Grid>
+
             <Grid>
               {/* <CryptoWallet
                 chartColor={theme.palette.primary.main}
@@ -118,9 +102,8 @@ const Page: NextPage = () => {
                 sx={{ height: "100%" }}
                 tips={[
                   {
-                    title: "New fresh design.",
-                    content:
-                      "Your favorite template has a new trendy look, more customization options, screens & more.",
+                    title: "Try out different settings",
+                    content: "Dark mode and light mode availiable",
                   },
                   {
                     title: "Tip 2.",
