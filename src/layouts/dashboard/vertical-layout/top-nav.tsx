@@ -88,7 +88,7 @@ export const TopNav: FC<TopNavProps> = (props) => {
           px: 2,
         }}
       >
-        <Stack alignItems="center" direction="row" spacing={2}>
+        <Stack alignItems="center" direction="row" spacing={1}>
           {!lgUp && (
             <IconButton onClick={onMobileNavOpen}>
               <SvgIcon>
@@ -101,7 +101,6 @@ export const TopNav: FC<TopNavProps> = (props) => {
           sx={{ display: { lg: "none", sm: "flex" } }}
           alignItems="center"
           direction="row"
-          spacing={2}
         >
           {navItems.map((item, index) => {
             return (
