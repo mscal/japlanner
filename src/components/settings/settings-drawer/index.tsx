@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC, SyntheticEvent } from "react";
 import { useCallback } from "react";
 import PropTypes from "prop-types";
 import RefreshCcw01Icon from "@untitled-ui/icons-react/build/esm/RefreshCcw01";
@@ -24,17 +24,19 @@ import { SwipeableDrawer } from "@mui/material";
 
 interface SettingsDrawerProps {
   canReset?: boolean;
-  onClose?: () => void;
+  onClose?: any;
   onReset?: () => void;
   onUpdate?: (settings: Settings) => void;
   open?: boolean;
   values?: Settings;
+  onOpen: any;
 }
 
 export const SettingsDrawer: FC<SettingsDrawerProps> = (props) => {
   const {
     canReset,
     onClose,
+    onOpen,
     onUpdate,
     onReset,
     open,
@@ -50,9 +52,15 @@ export const SettingsDrawer: FC<SettingsDrawerProps> = (props) => {
     },
     [onUpdate]
   );
+  const iOS =
+    typeof navigator !== "undefined" &&
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   return (
     <SwipeableDrawer
+      disableBackdropTransition={!iOS}
+      disableDiscovery={iOS}
+      onOpen={onOpen}
       disableScrollLock
       anchor="right"
       onClose={onClose}

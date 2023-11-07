@@ -51,6 +51,7 @@ export const VerticalLayout: FC<VerticalLayoutProps> = (props) => {
       <TopNav onMobileNavOpen={mobileNav.handleOpen} />
       {!lgUp && (
         <MobileNav
+          onOpen={mobileNav.handleOpen}
           color={navColor}
           onClose={mobileNav.handleClose}
           open={mobileNav.open}

@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC, ReactEventHandler, SyntheticEvent } from "react";
 import { useMemo } from "react";
 import PropTypes from "prop-types";
 import File04Icon from "@untitled-ui/icons-react/build/esm/File04";
@@ -116,19 +116,25 @@ const useCssVars = (color: NavColor): Record<string, string> => {
 
 interface MobileNavProps {
   color?: NavColor;
-  onClose?: () => void;
-  open?: boolean;
+  onClose?: any;
+  onOpen?: any;
+  open?: any;
   sections?: Section[];
 }
 
 export const MobileNav: FC<MobileNavProps> = (props) => {
-  const { color = "evident", open, onClose, sections = [] } = props;
+  const { color = "evident", open, onClose, onOpen, sections = [] } = props;
   const pathname = usePathname();
   const cssVars = useCssVars(color);
   const { handleDrawerOpen } = useSettings();
+  const iOS =
+    typeof navigator !== "undefined" &&
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   return (
     <SwipeableDrawer
+      disableBackdropTransition={!iOS}
+      disableDiscovery={iOS}
       anchor="left"
       onClose={onClose}
       open={open}
@@ -141,6 +147,7 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
         },
       }}
       variant="temporary"
+      onOpen={onOpen}
     >
       <Scrollbar
         sx={{
