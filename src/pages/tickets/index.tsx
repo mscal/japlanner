@@ -66,7 +66,7 @@ const Page: NextPage = () => {
         component="main"
         sx={{
           flexGrow: 1,
-          py: 8,
+          py: 4,
         }}
       >
         <Container maxWidth={settings.stretch ? false : "xl"}>
@@ -76,12 +76,17 @@ const Page: NextPage = () => {
               lg: 4,
             }}
           >
-            <Stack direction="row" justifyContent="space-between" spacing={4}>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              spacing={4}
+              alignItems={"center"}
+            >
               <div>
                 <Typography variant="h4">Tickets</Typography>
               </div>
               <TextField
-                label="Only Japlanners enter"
+                label="Only Japlanners Enter"
                 onChange={(e) => setPassword(e.target.value)}
                 onKeyDown={(ev) => {
                   if (ev.key === "Enter") {
@@ -89,7 +94,7 @@ const Page: NextPage = () => {
                     ev.preventDefault();
                   }
                 }}
-                size="small"
+                size="medium"
               />
             </Stack>
             {isAuthenticated && (

@@ -18,7 +18,7 @@ import { SearchButton } from "../search-button";
 import { SettingsButton } from "src/components/settings/settings-button";
 import { Button, Link } from "@mui/material";
 import { useSections } from "../config";
-import router from "next/router";
+import router, { useRouter } from "next/router";
 
 const TOP_NAV_HEIGHT: number = 64;
 const SIDE_NAV_WIDTH: number = 280;
@@ -58,6 +58,10 @@ export const TopNav: FC<TopNavProps> = (props) => {
     ],
     []
   );
+
+  const router = useRouter();
+
+  const currentPath = router.pathname;
 
   return (
     <Box
@@ -104,7 +108,14 @@ export const TopNav: FC<TopNavProps> = (props) => {
         >
           {navItems.map((item, index) => {
             return (
-              <Button key={index} onClick={() => router.push(item.path)}>
+              <Button
+                key={index}
+                onClick={() => router.push(item.path)}
+                sx={{
+                  backgroundColor:
+                    currentPath === item.path ? "#2a2f66" : "initial",
+                }}
+              >
                 {item.icon}
               </Button>
             );

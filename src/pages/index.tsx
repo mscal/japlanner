@@ -36,7 +36,7 @@ const Page: NextPage = () => {
         component="main"
         sx={{
           flexGrow: 1,
-          py: 8,
+          py: 4,
         }}
       >
         <Container maxWidth={settings.stretch ? false : "xl"}>
@@ -103,18 +103,24 @@ const Page: NextPage = () => {
                     createdAt: addDays(now, 10),
                     description: "3:00pm check-in 11:00am check-out",
                     title: "OMO5 Otsuka - Tokyo",
+                    location:
+                      "https://www.google.com/maps/place/Hoshino+Resorts+OMO5+Tokyo+Otsuka/@35.7329647,139.7266452,17z/data=!3m1!4b1!4m9!3m8!1s0x60188d76fc6b74f7:0xea65478e0423732f!5m2!4m1!1i2!8m2!3d35.7329647!4d139.7292201!16s%2Fg%2F11f_c0crzw?entry=ttu",
                   },
                   {
                     id: "dd6c8ce8655ac222b01f24f9",
                     createdAt: addDays(now, 20),
                     description: "3:00pm check-in 10:00am check-out",
                     title: "Konansou - Fujikawaguchiko",
+                    location:
+                      "https://www.google.com/maps/place/Fuji+Kawaguchiko+Onsen+Hotel+Konansou/@35.5036357,138.7658362,17z/data=!3m1!4b1!4m9!3m8!1s0x60195e289404b781:0x22e46e1e53498e87!5m2!4m1!1i2!8m2!3d35.5036357!4d138.7684111!16s%2Fg%2F1hc5dnckf?entry=ttu",
                   },
                   {
                     id: "f274902e2bf226865b3cf947",
                     createdAt: addDays(now, 21),
                     description: "3:00pm check-in 11:00am check-out",
                     title: "Hotel Resol Trinity - Osaka",
+                    location:
+                      "https://www.google.com/maps/place/HOTEL+RESOL+TRINITY+OSAKA/@34.6896168,135.5013837,17z/data=!3m1!5s0x6000e6e12a31ce99:0xa41c0c78cbb3103d!4m20!1m10!3m9!1s0x6000e72190eccd47:0xbe81402a21214ce7!2sHOTEL+RESOL+TRINITY+OSAKA!5m2!4m1!1i2!8m2!3d34.6896168!4d135.5039586!16s%2Fg%2F11fs_8n5t6!3m8!1s0x6000e72190eccd47:0xbe81402a21214ce7!5m2!4m1!1i2!8m2!3d34.6896168!4d135.5039586!16s%2Fg%2F11fs_8n5t6?entry=ttu",
                   },
                 ]}
               />

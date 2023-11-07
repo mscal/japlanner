@@ -18,12 +18,14 @@ import ListItemSecondaryAction from "@mui/material/ListItemSecondaryAction";
 import ListItemText from "@mui/material/ListItemText";
 import SvgIcon from "@mui/material/SvgIcon";
 import Typography from "@mui/material/Typography";
+import MyLocationIcon from "@mui/icons-material/MyLocation";
 
 type Event = {
   id: string;
   createdAt: Date;
   description: string;
   title: string;
+  location: string;
 };
 
 interface OverviewEventsProps {
@@ -79,9 +81,13 @@ export const OverviewEvents: FC<OverviewEventsProps> = (props) => {
                   </Typography>
                 </ListItemText>
                 <ListItemSecondaryAction>
-                  <IconButton color="inherit">
+                  <IconButton
+                    color="inherit"
+                    href={event.location}
+                    target="_blank"
+                  >
                     <SvgIcon fontSize="small">
-                      <CalendarIcon />
+                      <MyLocationIcon />
                     </SvgIcon>
                   </IconButton>
                 </ListItemSecondaryAction>

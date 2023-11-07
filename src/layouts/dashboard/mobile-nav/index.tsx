@@ -196,10 +196,10 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
               <SettingsButton onClick={handleDrawerOpen} />
             </Stack>
             <Typography color="neutral.400" variant="subtitle1">
-              Lost?
+              Hungry?
             </Typography>
             <Typography color="neutral.400" sx={{ mb: 2 }} variant="body2">
-              if lost click here
+              Ferishia no osusume tabemono
             </Typography>
             <Button
               component="a"
@@ -213,7 +213,7 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
               target="_blank"
               variant="contained"
             >
-              Open maps
+              Open Food Maps
             </Button>
           </Box>
         </Stack>

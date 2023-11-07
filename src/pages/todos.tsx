@@ -61,7 +61,7 @@ const Page = () => {
   return (
     <>
       <Seo title="Dashboard: Tasks" />
-      <Box component="main" sx={{ flexGrow: 1, py: 8 }}>
+      <Box component="main" sx={{ flexGrow: 1, py: 4 }}>
         <Container maxWidth="xl">
           <Typography variant="h4" mb={2}>
             Checklist
