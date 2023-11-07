@@ -100,27 +100,21 @@ const Page: NextPage = () => {
                 events={[
                   {
                     id: "3bfa0bc6cbc99bf747c94d51",
-                    createdAt: addDays(now, 1),
-                    description: "17:00 to 18:00",
-                    title: "Meeting with Partners",
+                    createdAt: addDays(now, 10),
+                    description: "3:00pm check-in 11:00am check-out",
+                    title: "OMO5 Otsuka - Tokyo",
                   },
                   {
                     id: "dd6c8ce8655ac222b01f24f9",
-                    createdAt: addDays(now, 4),
-                    description: "17:00 to 18:00",
-                    title: "Weekly Meeting",
+                    createdAt: addDays(now, 20),
+                    description: "3:00pm check-in 10:00am check-out",
+                    title: "Konansou - Fujikawaguchiko",
                   },
                   {
                     id: "f274902e2bf226865b3cf947",
-                    createdAt: addDays(now, 4),
-                    description: "17:00 to 18:00",
-                    title: "Weekly Meeting",
-                  },
-                  {
-                    id: "d2a66e24110f52acb0cd0b9f",
-                    createdAt: addDays(now, 7),
-                    description: "17:00 to 18:00",
-                    title: "Weekly Meeting",
+                    createdAt: addDays(now, 21),
+                    description: "3:00pm check-in 11:00am check-out",
+                    title: "Hotel Resol Trinity - Osaka",
                   },
                 ]}
               />

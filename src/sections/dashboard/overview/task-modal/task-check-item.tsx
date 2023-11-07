@@ -10,6 +10,11 @@ import Stack from "@mui/material/Stack";
 import SvgIcon from "@mui/material/SvgIcon";
 
 interface TaskCheckItemProps {
+  checkItem: {
+    id: string;
+    text: string;
+    state: string;
+  };
   isRenaming?: boolean;
   onCheck?: () => void;
   onDelete?: () => void;
@@ -21,6 +26,7 @@ interface TaskCheckItemProps {
 
 export const TaskCheckItem: FC<TaskCheckItemProps> = (props) => {
   const {
+    checkItem,
     isRenaming = false,
     onCheck,
     onDelete,
@@ -32,17 +38,22 @@ export const TaskCheckItem: FC<TaskCheckItemProps> = (props) => {
   } = props;
   const [nameCopy, setNameCopy] = useState<string>("");
 
-  const handleNameReset = useCallback(() => {
-    setNameCopy("");
-  }, []);
+  useEffect(() => {
+    // Initialize nameCopy with the text from props
+    setNameCopy(checkItem.text);
+  }, [checkItem.text]);
 
-  useEffect(
-    () => {
-      handleNameReset();
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  );
+  // const handleNameReset = useCallback(() => {
+  //   setNameCopy("");
+  // }, []);
+
+  // useEffect(
+  //   () => {
+  //     handleNameReset();
+  //   },
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   []
+  // );
 
   const handleCheckChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>): void => {
@@ -71,7 +82,7 @@ export const TaskCheckItem: FC<TaskCheckItemProps> = (props) => {
     onRenameComplete?.(nameCopy);
   }, [nameCopy, onRenameComplete]);
 
-  const isChecked = true;
+  const isChecked = checkItem.state === "complete";
   const isDashed = !isRenaming && isChecked;
 
   return (
@@ -145,12 +156,16 @@ export const TaskCheckItem: FC<TaskCheckItemProps> = (props) => {
 
 TaskCheckItem.propTypes = {
   // @ts-ignore
-  checkItem: PropTypes.object.isRequired,
-  isRenaming: PropTypes.bool,
-  onCheck: PropTypes.func,
-  onDelete: PropTypes.func,
-  onRenameCancel: PropTypes.func,
-  onRenameComplete: PropTypes.func,
-  onRenameInit: PropTypes.func,
-  onUncheck: PropTypes.func,
+  checkItem: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+    isRenaming: PropTypes.bool,
+    onCheck: PropTypes.func,
+    onDelete: PropTypes.func,
+    onRenameCancel: PropTypes.func,
+    onRenameComplete: PropTypes.func,
+    onRenameInit: PropTypes.func,
+    onUncheck: PropTypes.func,
+  }).isRequired,
 };

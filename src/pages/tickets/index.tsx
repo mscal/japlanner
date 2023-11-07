@@ -37,7 +37,7 @@ const Page: NextPage = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ password: password }),
+      body: JSON.stringify({ password: password.toLowerCase() }),
     });
 
     if (response.ok) {
