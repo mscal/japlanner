@@ -22,6 +22,7 @@ import { TenantSwitch } from "../tenant-switch";
 import { MobileNavSection } from "./mobile-nav-section";
 import { SettingsButton } from "src/components/settings/settings-button";
 import { useSettings } from "src/hooks/use-settings";
+import { SwipeableDrawer } from "@mui/material";
 
 const MOBILE_NAV_WIDTH: number = 280;
 
@@ -127,7 +128,7 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
   const { handleDrawerOpen } = useSettings();
 
   return (
-    <Drawer
+    <SwipeableDrawer
       anchor="left"
       onClose={onClose}
       open={open}
@@ -218,7 +219,7 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
           </Box>
         </Stack>
       </Scrollbar>
-    </Drawer>
+    </SwipeableDrawer>
   );
 };
 

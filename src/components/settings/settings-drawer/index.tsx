@@ -20,6 +20,7 @@ import { OptionsLayout } from "./options-layout";
 import { OptionsNavColor } from "./options-nav-color";
 import { OptionsColorScheme } from "./options-color-scheme";
 import { OptionsStretch } from "./options-stretch";
+import { SwipeableDrawer } from "@mui/material";
 
 interface SettingsDrawerProps {
   canReset?: boolean;
@@ -51,7 +52,7 @@ export const SettingsDrawer: FC<SettingsDrawerProps> = (props) => {
   );
 
   return (
-    <Drawer
+    <SwipeableDrawer
       disableScrollLock
       anchor="right"
       onClose={onClose}
@@ -155,7 +156,7 @@ export const SettingsDrawer: FC<SettingsDrawerProps> = (props) => {
           />
         </Stack>
       </Scrollbar>
-    </Drawer>
+    </SwipeableDrawer>
   );
 };
 
