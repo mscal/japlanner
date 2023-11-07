@@ -410,7 +410,7 @@ const Page: NextPage = () => {
               >
                 {days.map((day, index) => {
                   return (
-                    <Grid item xs={2} key={index}>
+                    <Grid item xs={3} key={index}>
                       <Button
                         onClick={(e) => handleActive(index, day)}
                         variant={day.active ? "contained" : "outlined"}
