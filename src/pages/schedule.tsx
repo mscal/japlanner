@@ -36,10 +36,22 @@ const Page: NextPage = () => {
             "Rikugien Garden Maybe",
           ],
           subIcons: [
-            <img src="/assets/japan/icons8-travel-card.svg" height={40} />,
-            <img src="/assets/japan/icons8-service-bell.svg" height={40} />,
-            <img src="/assets/japan/icons8-rice-bowl.svg" height={40} />,
-            <img src="/assets/japan/icons8-bonsai.svg" height={40} />,
+            <img
+              key={1}
+              src="/assets/japan/icons8-travel-card.svg"
+              height={40}
+            />,
+            <img
+              key={2}
+              src="/assets/japan/icons8-service-bell.svg"
+              height={40}
+            />,
+            <img
+              key={3}
+              src="/assets/japan/icons8-rice-bowl.svg"
+              height={40}
+            />,
+            <img key={4} src="/assets/japan/icons8-bonsai.svg" height={40} />,
           ],
         },
       ],
@@ -55,22 +67,32 @@ const Page: NextPage = () => {
             "Book train tickets (ask about luggage)",
           ],
           subIcons: [
-            <img src="/assets/japan/icons8-train-ticket.svg" height={40} />,
-            <img src="/assets/japan/icons8-new-ticket.svg" height={40} />,
+            <img
+              key={5}
+              src="/assets/japan/icons8-train-ticket.svg"
+              height={40}
+            />,
+            <img
+              key={6}
+              src="/assets/japan/icons8-new-ticket.svg"
+              height={40}
+            />,
           ],
         },
         {
           name: "Shinjuku",
           subActivities: ["Pokemon Centre", "Animate"],
           subIcons: [
-            <img src="/assets/japan/icons8-pokemon.svg" height={40} />,
-            <img src="/assets/japan/icons8-anime.svg" height={40} />,
+            <img key={7} src="/assets/japan/icons8-pokemon.svg" height={40} />,
+            <img key={8} src="/assets/japan/icons8-anime.svg" height={40} />,
           ],
         },
         {
           name: "Shibuya",
           subActivities: ["Gatchapon Departo"],
-          subIcons: [<img src="/assets/japan/icons8-sphere.svg" height={40} />],
+          subIcons: [
+            <img key={9} src="/assets/japan/icons8-sphere.svg" height={40} />,
+          ],
         },
       ],
     },
@@ -86,9 +108,17 @@ const Page: NextPage = () => {
             "Hie Shrine (Optional)",
           ],
           subIcons: [
-            <img src="/assets/japan/icons8-temple.svg" height={40} />,
-            <img src="/assets/japan/icons8-kawaii-cupcake.svg" height={40} />,
-            <img src="/assets/japan/icons8-torii-ori.svg" height={40} />,
+            <img key={10} src="/assets/japan/icons8-temple.svg" height={40} />,
+            <img
+              key={11}
+              src="/assets/japan/icons8-kawaii-cupcake.svg"
+              height={40}
+            />,
+            <img
+              key={12}
+              src="/assets/japan/icons8-torii-ori.svg"
+              height={40}
+            />,
           ],
         },
         {
@@ -101,11 +131,23 @@ const Page: NextPage = () => {
             "Maybe Pet Cafe ~~~~",
           ],
           subIcons: [
-            <img src="/assets/japan/icons8-naruto.svg" height={40} />,
-            <img src="/assets/japan/icons8-game.svg" height={40} />,
-            <img src="/assets/japan/icons8-xbox-cross.svg" height={40} />,
-            <img src="/assets/japan/icons8-building.svg" height={40} />,
-            <img src="/assets/japan/icons8-running-rabbit.svg" height={40} />,
+            <img key={13} src="/assets/japan/icons8-naruto.svg" height={40} />,
+            <img key={14} src="/assets/japan/icons8-game.svg" height={40} />,
+            <img
+              key={15}
+              src="/assets/japan/icons8-xbox-cross.svg"
+              height={40}
+            />,
+            <img
+              key={16}
+              src="/assets/japan/icons8-building.svg"
+              height={40}
+            />,
+            <img
+              key={17}
+              src="/assets/japan/icons8-running-rabbit.svg"
+              height={40}
+            />,
           ],
         },
         {
@@ -118,11 +160,23 @@ const Page: NextPage = () => {
             "Karaage",
           ],
           subIcons: [
-            <img src="/assets/japan/icons8-sashimi.svg" height={40} />,
-            <img src="/assets/japan/icons8-kawaii-bread.svg" height={40} />,
-            <img src="/assets/japan/icons8-kawaii-bread.svg" height={40} />,
-            <img src="/assets/japan/icons8-flower.svg" height={40} />,
-            <img src="/assets/japan/icons8-poultry-leg.svg" height={40} />,
+            <img key={18} src="/assets/japan/icons8-sashimi.svg" height={40} />,
+            <img
+              key={19}
+              src="/assets/japan/icons8-kawaii-bread.svg"
+              height={40}
+            />,
+            <img
+              key={20}
+              src="/assets/japan/icons8-kawaii-bread.svg"
+              height={40}
+            />,
+            <img key={21} src="/assets/japan/icons8-flower.svg" height={40} />,
+            <img
+              key={22}
+              src="/assets/japan/icons8-poultry-leg.svg"
+              height={40}
+            />,
           ],
         },
       ],
@@ -144,14 +198,30 @@ const Page: NextPage = () => {
             "Kinu Tateiwa Otsuribashi bridge",
           ],
           subIcons: [
-            <img src="/assets/japan/icons8-Temple.svg" height={40} />,
-            <img src="/assets/japan/icons8-Torii-ori.svg" height={40} />,
-            <img src="/assets/japan/icons8-Torii-ori.svg" height={40} />,
-            <img src="/assets/japan/icons8-Torii-ori.svg" height={40} />,
-            <img src="/assets/japan/icons8-bridge.svg" height={40} />,
-            <img src="/assets/japan/icons8-waterfall.svg" height={40} />,
-            <img src="/assets/japan/icons8-ropeway.svg" height={40} />,
-            <img src="/assets/japan/icons8-bridge.svg" height={40} />,
+            <img key={23} src="/assets/japan/icons8-Temple.svg" height={40} />,
+            <img
+              key={24}
+              src="/assets/japan/icons8-Torii-ori.svg"
+              height={40}
+            />,
+            <img
+              key={25}
+              src="/assets/japan/icons8-Torii-ori.svg"
+              height={40}
+            />,
+            <img
+              key={26}
+              src="/assets/japan/icons8-Torii-ori.svg"
+              height={40}
+            />,
+            <img key={27} src="/assets/japan/icons8-bridge.svg" height={40} />,
+            <img
+              key={28}
+              src="/assets/japan/icons8-waterfall.svg"
+              height={40}
+            />,
+            <img key={29} src="/assets/japan/icons8-ropeway.svg" height={40} />,
+            <img key={30} src="/assets/japan/icons8-bridge.svg" height={40} />,
           ],
         },
         {
