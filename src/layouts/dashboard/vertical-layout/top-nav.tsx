@@ -44,10 +44,13 @@ export const TopNav: FC<TopNavProps> = (props) => {
         icon: <img src="/assets/japan/icons8-schedule.svg" width={"30"} />,
       },
       {
-        title: "Todos",
-        path: "/todos",
+        title: "Food",
+        path: "/food",
         icon: (
-          <img src="/assets/japan/icons8-task-completed.svg" width={"30"} />
+          <img
+            src="/assets/japan/icons8-kawaii-french-fries.svg"
+            width={"30"}
+          />
         ),
       },
       {
@@ -55,6 +58,13 @@ export const TopNav: FC<TopNavProps> = (props) => {
         path: "/tickets",
         icon: <img src="/assets/japan/icons8-train-ticket.svg" width={"30"} />,
       },
+      // {
+      //   title: "Todos",
+      //   path: "/todos",
+      //   icon: (
+      //     <img src="/assets/japan/icons8-task-completed.svg" width={"30"} />
+      //   ),
+      // },
     ],
     []
   );

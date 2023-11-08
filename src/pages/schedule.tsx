@@ -35,6 +35,12 @@ const Page: NextPage = () => {
             "Get CoCo Ichibanya",
             "Rikugien Garden Maybe",
           ],
+          subIcons: [
+            <img src="/assets/japan/icons8-travel-card.svg" height={40} />,
+            <img src="/assets/japan/icons8-service-bell.svg" height={40} />,
+            <img src="/assets/japan/icons8-rice-bowl.svg" height={40} />,
+            <img src="/assets/japan/icons8-bonsai.svg" height={40} />,
+          ],
         },
       ],
     },
@@ -45,17 +51,26 @@ const Page: NextPage = () => {
         {
           name: "Ikebukuro",
           subActivities: [
-            "Get train tickets (ask about luggage)",
             "Pick up rail pass",
+            "Book train tickets (ask about luggage)",
+          ],
+          subIcons: [
+            <img src="/assets/japan/icons8-train-ticket.svg" height={40} />,
+            <img src="/assets/japan/icons8-new-ticket.svg" height={40} />,
           ],
         },
         {
           name: "Shinjuku",
           subActivities: ["Pokemon Centre", "Animate"],
+          subIcons: [
+            <img src="/assets/japan/icons8-pokemon.svg" height={40} />,
+            <img src="/assets/japan/icons8-anime.svg" height={40} />,
+          ],
         },
         {
           name: "Shibuya",
           subActivities: ["Gatchapon Departo"],
+          subIcons: [<img src="/assets/japan/icons8-sphere.svg" height={40} />],
         },
       ],
     },
@@ -70,6 +85,11 @@ const Page: NextPage = () => {
             "Eat snacks",
             "Hie Shrine (Optional)",
           ],
+          subIcons: [
+            <img src="/assets/japan/icons8-temple.svg" height={40} />,
+            <img src="/assets/japan/icons8-kawaii-cupcake.svg" height={40} />,
+            <img src="/assets/japan/icons8-torii-ori.svg" height={40} />,
+          ],
         },
         {
           name: "Akihabara",
@@ -80,6 +100,13 @@ const Page: NextPage = () => {
             "Raido Kaikan",
             "Maybe Pet Cafe ~~~~",
           ],
+          subIcons: [
+            <img src="/assets/japan/icons8-naruto.svg" height={40} />,
+            <img src="/assets/japan/icons8-game.svg" height={40} />,
+            <img src="/assets/japan/icons8-xbox-cross.svg" height={40} />,
+            <img src="/assets/japan/icons8-building.svg" height={40} />,
+            <img src="/assets/japan/icons8-running-rabbit.svg" height={40} />,
+          ],
         },
         {
           name: "Food",
@@ -89,6 +116,13 @@ const Page: NextPage = () => {
             "Menchikatsu",
             "Wagashiya",
             "Karaage",
+          ],
+          subIcons: [
+            <img src="/assets/japan/icons8-sashimi.svg" height={40} />,
+            <img src="/assets/japan/icons8-kawaii-bread.svg" height={40} />,
+            <img src="/assets/japan/icons8-kawaii-bread.svg" height={40} />,
+            <img src="/assets/japan/icons8-flower.svg" height={40} />,
+            <img src="/assets/japan/icons8-poultry-leg.svg" height={40} />,
           ],
         },
       ],
@@ -108,6 +142,16 @@ const Page: NextPage = () => {
             "Kegon Waterfall",
             "Akechidaira Ropeway",
             "Kinu Tateiwa Otsuribashi bridge",
+          ],
+          subIcons: [
+            <img src="/assets/japan/icons8-Temple.svg" height={40} />,
+            <img src="/assets/japan/icons8-Torii-ori.svg" height={40} />,
+            <img src="/assets/japan/icons8-Torii-ori.svg" height={40} />,
+            <img src="/assets/japan/icons8-Torii-ori.svg" height={40} />,
+            <img src="/assets/japan/icons8-bridge.svg" height={40} />,
+            <img src="/assets/japan/icons8-waterfall.svg" height={40} />,
+            <img src="/assets/japan/icons8-ropeway.svg" height={40} />,
+            <img src="/assets/japan/icons8-bridge.svg" height={40} />,
           ],
         },
         {
@@ -477,7 +521,7 @@ const ScheduleList = ({
                 (subActivity: any, subIndex: number) => (
                   <ListItemButton key={subIndex} sx={{ pl: 4 }}>
                     <ListItemIcon>
-                      <StarBorder />
+                      {activity?.subIcons?.[subIndex]}
                     </ListItemIcon>
                     <ListItemText primary={subActivity} />
                   </ListItemButton>

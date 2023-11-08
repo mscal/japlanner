@@ -41,17 +41,28 @@ export const useSections = () => {
             icon: <img src="/assets/japan/icons8-schedule.svg" width={"40"} />,
           },
           {
-            title: "Todos",
-            path: paths.todos,
+            title: "Food",
+            path: paths.food,
             icon: (
-              <img src="/assets/japan/icons8-task-completed.svg" width={"40"} />
+              <img
+                src="/assets/japan/icons8-kawaii-french-fries.svg"
+                width={"40"}
+              />
             ),
           },
+
           {
             title: "Tickets",
             path: paths.tickets,
             icon: (
               <img src="/assets/japan/icons8-train-ticket.svg" width={"40"} />
+            ),
+          },
+          {
+            title: "Todos",
+            path: paths.todos,
+            icon: (
+              <img src="/assets/japan/icons8-task-completed.svg" width={"40"} />
             ),
           },
         ],

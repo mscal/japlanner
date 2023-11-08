@@ -100,7 +100,7 @@ const Page: NextPage = () => {
                 events={[
                   {
                     id: "3bfa0bc6cbc99bf747c94d51",
-                    createdAt: addDays(now, 10),
+                    createdAt: new Date(2023, 11, 17),
                     description: "3:00pm check-in 11:00am check-out",
                     title: "OMO5 Otsuka - Tokyo",
                     location:
@@ -108,7 +108,7 @@ const Page: NextPage = () => {
                   },
                   {
                     id: "dd6c8ce8655ac222b01f24f9",
-                    createdAt: addDays(now, 20),
+                    createdAt: new Date(2023, 11, 27),
                     description: "3:00pm check-in 10:00am check-out",
                     title: "Konansou - Fujikawaguchiko",
                     location:
@@ -116,7 +116,7 @@ const Page: NextPage = () => {
                   },
                   {
                     id: "f274902e2bf226865b3cf947",
-                    createdAt: addDays(now, 21),
+                    createdAt: new Date(2023, 11, 28),
                     description: "3:00pm check-in 11:00am check-out",
                     title: "Hotel Resol Trinity - Osaka",
                     location:

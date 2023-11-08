@@ -212,7 +212,9 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
             <Button
               component="a"
               fullWidth
-              href={"https://www.google.com/maps/place/Tokyo,+Japan/"}
+              href={
+                "https://www.google.com/maps/d/u/0/viewer?mid=1i7sozWtahRVnhJHjlD4t0tfiRDGQKFM&ll=35.665949880666695%2C139.66512788937172&z=12"
+              }
               startIcon={
                 <SvgIcon>
                   <File04Icon />
