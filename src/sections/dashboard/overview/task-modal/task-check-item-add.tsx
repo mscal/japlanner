@@ -45,7 +45,11 @@ export const TaskCheckItemAdd: FC<TaskCheckItemAddProps> = (props) => {
   return (
     <div {...other}>
       {isAdding ? (
-        <Stack alignItems="center" direction="row" spacing={2}>
+        <Stack
+          alignItems="center"
+          direction="row"
+          spacing={2}
+        >
           <OutlinedInput
             onChange={handleChange}
             placeholder="Add an item"
@@ -58,10 +62,18 @@ export const TaskCheckItemAdd: FC<TaskCheckItemAddProps> = (props) => {
               },
             }}
           />
-          <Button onClick={handleSave} size="small" variant="contained">
+          <Button
+            onClick={handleSave}
+            size="small"
+            variant="contained"
+          >
             Add
           </Button>
-          <Button color="inherit" onClick={handleCancel} size="small">
+          <Button
+            color="inherit"
+            onClick={handleCancel}
+            size="small"
+          >
             Cancel
           </Button>
         </Stack>

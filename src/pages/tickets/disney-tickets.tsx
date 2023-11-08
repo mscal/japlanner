@@ -16,16 +16,36 @@ const Page: NextPage = () => {
   const settings = useSettings();
 
   const mikeTickets = {
-    disney: <img src="/assets/qr/disney/mike_disney.png" width="100%" />,
+    disney: (
+      <img
+        src="/assets/qr/disney/mike_disney.png"
+        width="100%"
+      />
+    ),
   };
   const feeTickets = {
-    disney: <img src="/assets/qr/disney/fee_disney.png" width="100%" />,
+    disney: (
+      <img
+        src="/assets/qr/disney/fee_disney.png"
+        width="100%"
+      />
+    ),
   };
   const natTickets = {
-    disney: <img src="/assets/qr/disney/nat_disney.png" width="100%" />,
+    disney: (
+      <img
+        src="/assets/qr/disney/nat_disney.png"
+        width="100%"
+      />
+    ),
   };
   const megTickets = {
-    disney: <img src="/assets/qr/disney/meg_disney.png" width="100%" />,
+    disney: (
+      <img
+        src="/assets/qr/disney/meg_disney.png"
+        width="100%"
+      />
+    ),
   };
 
   return (
@@ -45,7 +65,11 @@ const Page: NextPage = () => {
               lg: 4,
             }}
           >
-            <Stack direction="row" justifyContent="space-between" spacing={4}>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              spacing={4}
+            >
               <div>
                 <Button
                   startIcon={<ChevronLeftIcon />}

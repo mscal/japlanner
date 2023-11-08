@@ -59,7 +59,10 @@ export const ContactsButton: FC = () => {
   return (
     <>
       <Tooltip title="Contacts">
-        <IconButton onClick={popover.handleOpen} ref={popover.anchorRef}>
+        <IconButton
+          onClick={popover.handleOpen}
+          ref={popover.anchorRef}
+        >
           <SvgIcon>
             <Users03Icon />
           </SvgIcon>

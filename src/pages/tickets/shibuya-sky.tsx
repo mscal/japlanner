@@ -16,16 +16,36 @@ const Page: NextPage = () => {
   const settings = useSettings();
 
   const mikeTickets = {
-    sky: <img src="/assets/qr/sky/mike_sky.png" width="100%" />,
+    sky: (
+      <img
+        src="/assets/qr/sky/mike_sky.png"
+        width="100%"
+      />
+    ),
   };
   const feeTickets = {
-    sky: <img src="/assets/qr/sky/fee_sky.png" width="100%" />,
+    sky: (
+      <img
+        src="/assets/qr/sky/fee_sky.png"
+        width="100%"
+      />
+    ),
   };
   const natTickets = {
-    sky: <img src="/assets/qr/sky/nat_sky.png" width="100%" />,
+    sky: (
+      <img
+        src="/assets/qr/sky/nat_sky.png"
+        width="100%"
+      />
+    ),
   };
   const megTickets = {
-    sky: <img src="/assets/qr/sky/meg_sky.png" width="100%" />,
+    sky: (
+      <img
+        src="/assets/qr/sky/meg_sky.png"
+        width="100%"
+      />
+    ),
   };
 
   return (
@@ -45,7 +65,11 @@ const Page: NextPage = () => {
               lg: 4,
             }}
           >
-            <Stack direction="row" justifyContent="space-between" spacing={4}>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              spacing={4}
+            >
               <div>
                 <Button
                   startIcon={<ChevronLeftIcon />}

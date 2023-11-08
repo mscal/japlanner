@@ -34,13 +34,22 @@ export const OverviewPendingIssues: FC<OverviewPendingIssuesProps> = (
         }}
       >
         <div>
-          <img src="/assets/iconly/iconly-glass-info.svg" width={48} />
+          <img
+            src="/assets/iconly/iconly-glass-info.svg"
+            width={48}
+          />
         </div>
         <Box sx={{ flexGrow: 1 }}>
-          <Typography color="text.secondary" variant="body2">
+          <Typography
+            color="text.secondary"
+            variant="body2"
+          >
             Pending Issues
           </Typography>
-          <Typography color="text.primary" variant="h4">
+          <Typography
+            color="text.primary"
+            variant="h4"
+          >
             {amount}
           </Typography>
         </Box>

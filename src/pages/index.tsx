@@ -1,28 +1,15 @@
-import type { NextPage } from "next";
-import { addDays, subDays, subHours, subMinutes } from "date-fns";
-import PlusIcon from "@untitled-ui/icons-react/build/esm/Plus";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
-import SvgIcon from "@mui/material/SvgIcon";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Unstable_Grid2";
+import type { NextPage } from "next";
 
 import { Seo } from "src/components/seo";
 import { useSettings } from "src/hooks/use-settings";
 import { Layout as DashboardLayout } from "src/layouts/dashboard";
-import { OverviewBanner } from "src/sections/dashboard/overview/overview-banner";
 import { DashboardCards } from "src/sections/dashboard/overview/dashboard-cards";
 import { OverviewEvents } from "src/sections/dashboard/overview/overview-events";
-import { OverviewInbox } from "src/sections/dashboard/overview/overview-inbox";
-import { OverviewTransactions } from "src/sections/dashboard/overview/overview-transactions";
-import { OverviewPendingIssues } from "src/sections/dashboard/overview/overview-pending-issues";
-import { OverviewSubscriptionUsage } from "src/sections/dashboard/overview/overview-subscription-usage";
-import { OverviewHelp } from "src/sections/dashboard/overview/overview-help";
-import { OverviewJobs } from "src/sections/dashboard/overview/overview-jobs";
-import { OverviewOpenTickets } from "src/sections/dashboard/overview/overview-open-tickets";
-import { OverviewTips } from "src/sections/dashboard/overview/overview-tips";
 
 const now = new Date();
 
@@ -49,27 +36,45 @@ const Page: NextPage = () => {
             }}
           >
             <Grid xs={12}>
-              <Stack direction="row" justifyContent="space-between" spacing={4}>
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                spacing={4}
+              >
                 <div>
                   <Typography variant="h4">Overview</Typography>
                 </div>
               </Stack>
             </Grid>
-            <Grid xs={12} md={4}>
+            <Grid
+              xs={12}
+              md={4}
+            >
               <DashboardCards
                 title={"Depature"}
                 main={"17th Nov - 6am"}
                 link={""}
-                icon={<img src="/assets/japan/icons8-plane.svg" width={48} />}
+                icon={
+                  <img
+                    src="/assets/japan/icons8-plane.svg"
+                    width={48}
+                  />
+                }
               />
             </Grid>
-            <Grid xs={12} md={4}>
+            <Grid
+              xs={12}
+              md={4}
+            >
               <DashboardCards
                 title={"Arrival"}
                 main={"17th Nov - 8pm"}
                 link={""}
                 icon={
-                  <img src="/assets/japan/icons8-plane-land.svg" width={48} />
+                  <img
+                    src="/assets/japan/icons8-plane-land.svg"
+                    width={48}
+                  />
                 }
               />
             </Grid>
@@ -95,7 +100,10 @@ const Page: NextPage = () => {
               /> */}
             </Grid>
 
-            <Grid xs={12} md={5}>
+            <Grid
+              xs={12}
+              md={5}
+            >
               <OverviewEvents
                 events={[
                   {

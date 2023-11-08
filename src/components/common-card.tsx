@@ -32,14 +32,25 @@ export default function CommonCard({
         sx={{ paddingBottom: "0px" }}
       />
       <CardContent>
-        <Stack spacing={1} mb={2} direction={"row"}>
+        <Stack
+          spacing={1}
+          mb={2}
+          direction={"row"}
+        >
           {code && (
-            <Button variant="outlined" onClick={() => copy(code)}>
+            <Button
+              variant="outlined"
+              onClick={() => copy(code)}
+            >
               Code Copy
             </Button>
           )}
           {link && (
-            <Button href={link} target="_blank" variant="outlined">
+            <Button
+              href={link}
+              target="_blank"
+              variant="outlined"
+            >
               Link
             </Button>
           )}

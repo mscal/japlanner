@@ -151,18 +151,34 @@ export function TicketCards({
   return (
     <Card sx={{ maxWidth: 500 }}>
       <CardActionArea onClick={() => router.push(pageLink)}>
-        <CardMedia component="img" height="300" src={image} />
+        <CardMedia
+          component="img"
+          height="300"
+          src={image}
+        />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+          >
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+          >
             {location}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button target="_blank" href={link} size="small" color="primary">
+        <Button
+          target="_blank"
+          href={link}
+          size="small"
+          color="primary"
+        >
           Maps
         </Button>
       </CardActions>

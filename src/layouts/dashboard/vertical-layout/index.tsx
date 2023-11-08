@@ -43,7 +43,12 @@ export const VerticalLayout: FC<VerticalLayoutProps> = (props) => {
 
   return (
     <>
-      {lgUp && <SideNav color={navColor} sections={sections} />}
+      {lgUp && (
+        <SideNav
+          color={navColor}
+          sections={sections}
+        />
+      )}
 
       <VerticalLayoutRoot>
         <VerticalLayoutContainer>{children}</VerticalLayoutContainer>

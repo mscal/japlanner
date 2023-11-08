@@ -61,9 +61,15 @@ export const ContactsPopover: FC<ContactsPopoverProps> = (props) => {
                 : undefined;
 
             return (
-              <ListItem disableGutters key={contact.id}>
+              <ListItem
+                disableGutters
+                key={contact.id}
+              >
                 <ListItemAvatar>
-                  <Avatar src={contact.avatar} sx={{ cursor: "pointer" }} />
+                  <Avatar
+                    src={contact.avatar}
+                    sx={{ cursor: "pointer" }}
+                  />
                 </ListItemAvatar>
                 <ListItemText
                   disableTypography

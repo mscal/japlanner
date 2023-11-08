@@ -51,7 +51,11 @@ const Page: NextPage = () => {
               src="/assets/japan/icons8-rice-bowl.svg"
               height={40}
             />,
-            <img key={4} src="/assets/japan/icons8-bonsai.svg" height={40} />,
+            <img
+              key={4}
+              src="/assets/japan/icons8-bonsai.svg"
+              height={40}
+            />,
           ],
         },
       ],
@@ -83,15 +87,27 @@ const Page: NextPage = () => {
           name: "Shinjuku",
           subActivities: ["Pokemon Centre", "Animate"],
           subIcons: [
-            <img key={7} src="/assets/japan/icons8-pokemon.svg" height={40} />,
-            <img key={8} src="/assets/japan/icons8-anime.svg" height={40} />,
+            <img
+              key={7}
+              src="/assets/japan/icons8-pokemon.svg"
+              height={40}
+            />,
+            <img
+              key={8}
+              src="/assets/japan/icons8-anime.svg"
+              height={40}
+            />,
           ],
         },
         {
           name: "Shibuya",
           subActivities: ["Gatchapon Departo"],
           subIcons: [
-            <img key={9} src="/assets/japan/icons8-sphere.svg" height={40} />,
+            <img
+              key={9}
+              src="/assets/japan/icons8-sphere.svg"
+              height={40}
+            />,
           ],
         },
       ],
@@ -108,7 +124,11 @@ const Page: NextPage = () => {
             "Hie Shrine (Optional)",
           ],
           subIcons: [
-            <img key={10} src="/assets/japan/icons8-temple.svg" height={40} />,
+            <img
+              key={10}
+              src="/assets/japan/icons8-temple.svg"
+              height={40}
+            />,
             <img
               key={11}
               src="/assets/japan/icons8-kawaii-cupcake.svg"
@@ -131,8 +151,16 @@ const Page: NextPage = () => {
             "Maybe Pet Cafe ~~~~",
           ],
           subIcons: [
-            <img key={13} src="/assets/japan/icons8-naruto.svg" height={40} />,
-            <img key={14} src="/assets/japan/icons8-game.svg" height={40} />,
+            <img
+              key={13}
+              src="/assets/japan/icons8-naruto.svg"
+              height={40}
+            />,
+            <img
+              key={14}
+              src="/assets/japan/icons8-game.svg"
+              height={40}
+            />,
             <img
               key={15}
               src="/assets/japan/icons8-xbox-cross.svg"
@@ -160,7 +188,11 @@ const Page: NextPage = () => {
             "Karaage",
           ],
           subIcons: [
-            <img key={18} src="/assets/japan/icons8-sashimi.svg" height={40} />,
+            <img
+              key={18}
+              src="/assets/japan/icons8-sashimi.svg"
+              height={40}
+            />,
             <img
               key={19}
               src="/assets/japan/icons8-kawaii-bread.svg"
@@ -171,7 +203,11 @@ const Page: NextPage = () => {
               src="/assets/japan/icons8-kawaii-bread.svg"
               height={40}
             />,
-            <img key={21} src="/assets/japan/icons8-flower.svg" height={40} />,
+            <img
+              key={21}
+              src="/assets/japan/icons8-flower.svg"
+              height={40}
+            />,
             <img
               key={22}
               src="/assets/japan/icons8-poultry-leg.svg"
@@ -198,30 +234,46 @@ const Page: NextPage = () => {
             "Kinu Tateiwa Otsuribashi bridge",
           ],
           subIcons: [
-            <img key={23} src="/assets/japan/icons8-Temple.svg" height={40} />,
+            <img
+              key={23}
+              src="/assets/japan/icons8-temple.svg"
+              height={40}
+            />,
             <img
               key={24}
-              src="/assets/japan/icons8-Torii-ori.svg"
+              src="/assets/japan/icons8-torii-ori.svg"
               height={40}
             />,
             <img
               key={25}
-              src="/assets/japan/icons8-Torii-ori.svg"
+              src="/assets/japan/icons8-torii-ori.svg"
               height={40}
             />,
             <img
               key={26}
-              src="/assets/japan/icons8-Torii-ori.svg"
+              src="/assets/japan/icons8-torii-ori.svg"
               height={40}
             />,
-            <img key={27} src="/assets/japan/icons8-bridge.svg" height={40} />,
+            <img
+              key={27}
+              src="/assets/japan/icons8-bridge.svg"
+              height={40}
+            />,
             <img
               key={28}
               src="/assets/japan/icons8-waterfall.svg"
               height={40}
             />,
-            <img key={29} src="/assets/japan/icons8-ropeway.svg" height={40} />,
-            <img key={30} src="/assets/japan/icons8-bridge.svg" height={40} />,
+            <img
+              key={29}
+              src="/assets/japan/icons8-ropeway.svg"
+              height={40}
+            />,
+            <img
+              key={30}
+              src="/assets/japan/icons8-bridge.svg"
+              height={40}
+            />,
           ],
         },
         {
@@ -511,7 +563,11 @@ const Page: NextPage = () => {
               lg: 4,
             }}
           >
-            <Stack direction="row" justifyContent="space-between" spacing={4}>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              spacing={4}
+            >
               <div>
                 <Typography variant="h4">Schedule</Typography>
               </div>
@@ -524,7 +580,11 @@ const Page: NextPage = () => {
               >
                 {days.map((day, index) => {
                   return (
-                    <Grid item xs={3} key={index}>
+                    <Grid
+                      item
+                      xs={3}
+                      key={index}
+                    >
                       <Button
                         onClick={(e) => handleActive(index, day)}
                         variant={day.active ? "contained" : "outlined"}
@@ -586,10 +646,16 @@ const ScheduleList = ({
             timeout="auto"
             unmountOnExit
           >
-            <List component="div" disablePadding>
+            <List
+              component="div"
+              disablePadding
+            >
               {activity.subActivities.map(
                 (subActivity: any, subIndex: number) => (
-                  <ListItemButton key={subIndex} sx={{ pl: 4 }}>
+                  <ListItemButton
+                    key={subIndex}
+                    sx={{ pl: 4 }}
+                  >
                     <ListItemIcon>
                       {activity?.subIcons?.[subIndex]}
                     </ListItemIcon>

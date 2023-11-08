@@ -1,11 +1,7 @@
 import type { ReactNode } from "react";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { SvgIcon } from "@mui/material";
 
-import File01Icon from "src/icons/untitled-ui/duocolor/file-01";
-import HomeSmileIcon from "src/icons/untitled-ui/duocolor/home-smile";
-import { tokens } from "src/locales/tokens";
 import { paths } from "src/paths";
 
 export interface Item {
@@ -33,12 +29,22 @@ export const useSections = () => {
           {
             title: "Trip Overview",
             path: paths.index,
-            icon: <img src="/assets/japan/icons8-asia.svg" width={"40"} />,
+            icon: (
+              <img
+                src="/assets/japan/icons8-asia.svg"
+                width={"40"}
+              />
+            ),
           },
           {
             title: "Schedule",
             path: paths.schedule,
-            icon: <img src="/assets/japan/icons8-schedule.svg" width={"40"} />,
+            icon: (
+              <img
+                src="/assets/japan/icons8-schedule.svg"
+                width={"40"}
+              />
+            ),
           },
           {
             title: "Food",
@@ -55,18 +61,24 @@ export const useSections = () => {
             title: "Tickets",
             path: paths.tickets,
             icon: (
-              <img src="/assets/japan/icons8-train-ticket.svg" width={"40"} />
+              <img
+                src="/assets/japan/icons8-train-ticket.svg"
+                width={"40"}
+              />
             ),
           },
           {
             title: "Todos",
             path: paths.todos,
             icon: (
-              <img src="/assets/japan/icons8-task-completed.svg" width={"40"} />
+              <img
+                src="/assets/japan/icons8-task-completed.svg"
+                width={"40"}
+              />
             ),
           },
         ],
       },
     ];
-  }, [t]);
+  }, []);
 };

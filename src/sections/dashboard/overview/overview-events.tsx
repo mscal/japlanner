@@ -37,7 +37,10 @@ export const OverviewEvents: FC<OverviewEventsProps> = (props) => {
 
   return (
     <Card>
-      <CardHeader title="Check-in days" subheader="Initial hotel checkins" />
+      <CardHeader
+        title="Check-in days"
+        subheader="Initial hotel checkins"
+      />
       <CardContent sx={{ pt: 0 }}>
         <List disablePadding>
           {events.map((event) => {
@@ -45,7 +48,11 @@ export const OverviewEvents: FC<OverviewEventsProps> = (props) => {
             const createdAtDay = format(event.createdAt, "d");
 
             return (
-              <ListItem disableGutters sx={{ py: 1.5 }} key={event.id}>
+              <ListItem
+                disableGutters
+                sx={{ py: 1.5 }}
+                key={event.id}
+              >
                 <ListItemAvatar>
                   <Box
                     sx={{
@@ -76,7 +83,10 @@ export const OverviewEvents: FC<OverviewEventsProps> = (props) => {
                 </ListItemAvatar>
                 <ListItemText>
                   <Typography variant="subtitle2">{event.title}</Typography>
-                  <Typography color="text.secondary" variant="body2">
+                  <Typography
+                    color="text.secondary"
+                    variant="body2"
+                  >
                     {event.description}
                   </Typography>
                 </ListItemText>

@@ -22,48 +22,20 @@ const Page = () => {
         },
       ],
     },
-    // ... you can add more tasks
   ]);
 
-  // Function to toggle the completed state of a checklist item
-  const toggleChecklistItem = (
-    taskId: string,
-    checklistId: string,
-    itemId: string
-  ) => {
-    setTasks((currentTasks) =>
-      currentTasks.map((task) => {
-        if (task.id === taskId) {
-          return {
-            ...task,
-            checklists: task.checklists.map((checklist) => {
-              if (checklist.id === checklistId) {
-                return {
-                  ...checklist,
-                  items: checklist.items.map((item) => {
-                    if (item.id === itemId) {
-                      return { ...item, checked: !item.checked };
-                    }
-                    return item;
-                  }),
-                };
-              }
-              return checklist;
-            }),
-          };
-        }
-        return task;
-      })
-    );
-  };
-
-  // Example to-do list rendering (simplified for brevity)
   return (
     <>
       <Seo title="Dashboard: Tasks" />
-      <Box component="main" sx={{ flexGrow: 1, py: 4 }}>
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, py: 4 }}
+      >
         <Container maxWidth="xl">
-          <Typography variant="h4" mb={2}>
+          <Typography
+            variant="h4"
+            mb={2}
+          >
             Checklist
           </Typography>
           <TaskChecklist />

@@ -190,7 +190,12 @@ export const SideNav: FC<SideNavProps> = (props) => {
         }}
       >
         <Stack sx={{ height: "100%" }}>
-          <Stack alignItems="center" direction="row" spacing={2} sx={{ p: 3 }}>
+          <Stack
+            alignItems="center"
+            direction="row"
+            spacing={2}
+            sx={{ p: 3 }}
+          >
             <Box
               component={RouterLink}
               href={paths.index}
@@ -228,7 +233,11 @@ export const SideNav: FC<SideNavProps> = (props) => {
           </Stack>
           <Box sx={{ p: 3 }}>
             <Typography variant="subtitle1">Lost?</Typography>
-            <Typography color="neutral.400" sx={{ mb: 2 }} variant="body2">
+            <Typography
+              color="neutral.400"
+              sx={{ mb: 2 }}
+              variant="body2"
+            >
               Open maps in area
             </Typography>
             <Button

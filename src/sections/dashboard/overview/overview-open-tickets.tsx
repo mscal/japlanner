@@ -32,13 +32,22 @@ export const OverviewOpenTickets: FC<OverviewOpenTicketsProps> = (props) => {
         }}
       >
         <div>
-          <img src="/assets/iconly/iconly-glass-paper.svg" width={48} />
+          <img
+            src="/assets/iconly/iconly-glass-paper.svg"
+            width={48}
+          />
         </div>
         <Box sx={{ flexGrow: 1 }}>
-          <Typography color="text.secondary" variant="body2">
+          <Typography
+            color="text.secondary"
+            variant="body2"
+          >
             Open tickets
           </Typography>
-          <Typography color="text.primary" variant="h4">
+          <Typography
+            color="text.primary"
+            variant="h4"
+          >
             {amount}
           </Typography>
         </Box>

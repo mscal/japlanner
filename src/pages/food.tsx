@@ -1,18 +1,14 @@
-import type { NextPage } from "next";
-import PlusIcon from "@untitled-ui/icons-react/build/esm/Plus";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import SvgIcon from "@mui/material/SvgIcon";
 import Typography from "@mui/material/Typography";
-
-import { Seo } from "src/components/seo";
-import { useSettings } from "src/hooks/use-settings";
-import { Layout as DashboardLayout } from "src/layouts/dashboard";
-import CommonTabs from "src/components/tabs";
+import type { NextPage } from "next";
 import { Skeleton } from "@mui/material";
 import { useState } from "react";
+import { Seo } from "src/components/seo";
+import CommonTabs from "src/components/tabs";
+import { useSettings } from "src/hooks/use-settings";
+import { Layout as DashboardLayout } from "src/layouts/dashboard";
 
 const Page: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -37,12 +33,19 @@ const Page: NextPage = () => {
               lg: 4,
             }}
           >
-            <Stack direction="row" justifyContent="space-between" spacing={4}>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              spacing={4}
+            >
               <div>
                 <Typography variant="h4">Food</Typography>
               </div>
               <div>
-                <Stack direction="row" spacing={4}></Stack>
+                <Stack
+                  direction="row"
+                  spacing={4}
+                ></Stack>
               </div>
             </Stack>
             <CommonTabs
@@ -73,7 +76,10 @@ const Page: NextPage = () => {
                 </Stack>
               }
               feesTickets={
-                <Stack spacing={2} minHeight={"600px"}>
+                <Stack
+                  spacing={2}
+                  minHeight={"600px"}
+                >
                   {loading2 && (
                     <Skeleton
                       animation="wave"

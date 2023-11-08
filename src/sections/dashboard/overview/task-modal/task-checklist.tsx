@@ -111,7 +111,10 @@ export const TaskChecklist = () => {
   return (
     <Card variant="outlined">
       <Box sx={{ p: 2 }}>
-        <Typography variant="h6" mb={2}>
+        <Typography
+          variant="h6"
+          mb={2}
+        >
           First day checklist
         </Typography>
         <LinearProgress
@@ -119,7 +122,10 @@ export const TaskChecklist = () => {
           value={progress}
           // ... other LinearProgress props
         />
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          variant="body2"
+          color="text.secondary"
+        >
           {progress}%
         </Typography>
       </Box>

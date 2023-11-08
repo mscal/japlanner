@@ -36,12 +36,22 @@ export const TopNav: FC<TopNavProps> = (props) => {
       {
         title: "Trip Overview",
         path: "/",
-        icon: <img src="/assets/japan/icons8-asia.svg" width={"30"} />,
+        icon: (
+          <img
+            src="/assets/japan/icons8-asia.svg"
+            width={"30"}
+          />
+        ),
       },
       {
         title: "Schedule",
         path: "/schedule",
-        icon: <img src="/assets/japan/icons8-schedule.svg" width={"30"} />,
+        icon: (
+          <img
+            src="/assets/japan/icons8-schedule.svg"
+            width={"30"}
+          />
+        ),
       },
       {
         title: "Food",
@@ -56,7 +66,12 @@ export const TopNav: FC<TopNavProps> = (props) => {
       {
         title: "Tickets",
         path: "/tickets",
-        icon: <img src="/assets/japan/icons8-train-ticket.svg" width={"30"} />,
+        icon: (
+          <img
+            src="/assets/japan/icons8-train-ticket.svg"
+            width={"30"}
+          />
+        ),
       },
       // {
       //   title: "Todos",
@@ -102,7 +117,11 @@ export const TopNav: FC<TopNavProps> = (props) => {
           px: 2,
         }}
       >
-        <Stack alignItems="center" direction="row" spacing={1}>
+        <Stack
+          alignItems="center"
+          direction="row"
+          spacing={1}
+        >
           {!lgUp && (
             <IconButton onClick={onMobileNavOpen}>
               <SvgIcon>
@@ -131,7 +150,11 @@ export const TopNav: FC<TopNavProps> = (props) => {
             );
           })}
         </Stack>
-        <Stack alignItems="center" direction="row" spacing={2}>
+        <Stack
+          alignItems="center"
+          direction="row"
+          spacing={2}
+        >
           <ContactsButton />
 
           {/* <AccountButton /> */}

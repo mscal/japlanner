@@ -41,13 +41,24 @@ export const OverviewBanner: FC = (props) => {
         <img src="/assets/person-standing.png" />
       </Box>
       <Box sx={{ flexGrow: 1 }}>
-        <Typography color="primary.main" variant="overline">
+        <Typography
+          color="primary.main"
+          variant="overline"
+        >
           New v6 update
         </Typography>
-        <Typography color="text.primary" sx={{ mt: 2 }} variant="h6">
+        <Typography
+          color="text.primary"
+          sx={{ mt: 2 }}
+          variant="h6"
+        >
           New update available!
         </Typography>
-        <Typography color="text.primary" sx={{ mt: 1 }} variant="body1">
+        <Typography
+          color="text.primary"
+          sx={{ mt: 1 }}
+          variant="body1"
+        >
           Your favorite template has a new trendy look, more customization
           options, screens & more.
         </Typography>

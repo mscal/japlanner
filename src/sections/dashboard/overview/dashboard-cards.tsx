@@ -38,10 +38,16 @@ export const DashboardCards = ({
       >
         <div>{icon}</div>
         <Box sx={{ flexGrow: 1 }}>
-          <Typography color="text.secondary" variant="body2">
+          <Typography
+            color="text.secondary"
+            variant="body2"
+          >
             {title}
           </Typography>
-          <Typography color="text.primary" variant="h4">
+          <Typography
+            color="text.primary"
+            variant="h4"
+          >
             {main}
           </Typography>
         </Box>

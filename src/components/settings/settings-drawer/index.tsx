@@ -102,7 +102,11 @@ export const SettingsDrawer: FC<SettingsDrawerProps> = (props) => {
           }}
         >
           <Typography variant="h6">App Settings</Typography>
-          <Stack alignItems="center" direction="row" spacing={0.5}>
+          <Stack
+            alignItems="center"
+            direction="row"
+            spacing={0.5}
+          >
             <Badge
               anchorOrigin={{
                 horizontal: "right",
@@ -120,20 +124,29 @@ export const SettingsDrawer: FC<SettingsDrawerProps> = (props) => {
               }}
               variant="dot"
             >
-              <IconButton color="inherit" onClick={onReset}>
+              <IconButton
+                color="inherit"
+                onClick={onReset}
+              >
                 <SvgIcon fontSize="small">
                   <RefreshCcw01Icon />
                 </SvgIcon>
               </IconButton>
             </Badge>
-            <IconButton color="inherit" onClick={onClose}>
+            <IconButton
+              color="inherit"
+              onClick={onClose}
+            >
               <SvgIcon>
                 <XIcon />
               </SvgIcon>
             </IconButton>
           </Stack>
         </Stack>
-        <Stack spacing={5} sx={{ p: 3 }}>
+        <Stack
+          spacing={5}
+          sx={{ p: 3 }}
+        >
           <OptionsColorPreset
             onChange={(value) => handleFieldUpdate("colorPreset", value)}
             value={values.colorPreset}

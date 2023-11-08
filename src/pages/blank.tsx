@@ -31,12 +31,19 @@ const Page: NextPage = () => {
               lg: 4,
             }}
           >
-            <Stack direction="row" justifyContent="space-between" spacing={4}>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              spacing={4}
+            >
               <div>
                 <Typography variant="h4">Blank</Typography>
               </div>
               <div>
-                <Stack direction="row" spacing={4}>
+                <Stack
+                  direction="row"
+                  spacing={4}
+                >
                   <Button
                     startIcon={
                       <SvgIcon>

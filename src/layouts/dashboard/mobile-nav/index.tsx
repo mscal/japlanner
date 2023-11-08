@@ -161,7 +161,12 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
         }}
       >
         <Stack sx={{ height: "100%" }}>
-          <Stack alignItems="center" direction="row" spacing={2} sx={{ p: 3 }}>
+          <Stack
+            alignItems="center"
+            direction="row"
+            spacing={2}
+            sx={{ p: 3 }}
+          >
             <Box
               component={RouterLink}
               href={paths.index}
@@ -203,10 +208,17 @@ export const MobileNav: FC<MobileNavProps> = (props) => {
             <Stack mb={2}>
               <SettingsButton onClick={handleDrawerOpen} />
             </Stack>
-            <Typography color="neutral.400" variant="subtitle1">
+            <Typography
+              color="neutral.400"
+              variant="subtitle1"
+            >
               Hungry?
             </Typography>
-            <Typography color="neutral.400" sx={{ mb: 2 }} variant="body2">
+            <Typography
+              color="neutral.400"
+              sx={{ mb: 2 }}
+              variant="body2"
+            >
               Ferishia no osusume tabemono
             </Typography>
             <Button

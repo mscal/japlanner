@@ -96,7 +96,11 @@ export const TaskCheckItem: FC<TaskCheckItemProps> = (props) => {
       }}
       {...other}
     >
-      <Checkbox edge="start" checked={isChecked} onChange={handleCheckChange} />
+      <Checkbox
+        edge="start"
+        checked={isChecked}
+        onChange={handleCheckChange}
+      />
       <Stack
         alignItems="center"
         direction="row"
@@ -138,7 +142,11 @@ export const TaskCheckItem: FC<TaskCheckItemProps> = (props) => {
             >
               Update
             </Button>
-            <Button color="inherit" onClick={handleRenameCancel} size="small">
+            <Button
+              color="inherit"
+              onClick={handleRenameCancel}
+              size="small"
+            >
               Cancel
             </Button>
           </>
