@@ -1,19 +1,17 @@
 // Remove if simplebar is not used
 import "simplebar-react/dist/simplebar.min.css";
 
-import type { NextPage } from "next";
-import type { AppProps } from "next/app";
-import Head from "next/head";
 import type { EmotionCache } from "@emotion/react";
 import { CacheProvider } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { Provider as ReduxProvider } from "react-redux";
+import type { NextPage } from "next";
+import type { AppProps } from "next/app";
+import Head from "next/head";
 
 import { RTL } from "src/components/rtl";
-import { SettingsButton } from "src/components/settings/settings-button";
 import { SettingsDrawer } from "src/components/settings/settings-drawer";
 import { Toaster } from "src/components/toaster";
 import {

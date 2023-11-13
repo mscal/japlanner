@@ -5,16 +5,13 @@ import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import type { NextPage } from "next";
-
-import {
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  TextField,
-} from "@mui/material";
+import Card from "@mui/material/Card";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import TextField from "@mui/material/TextField";
 import router from "next/router";
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Seo } from "src/components/seo";
 import { useSettings } from "src/hooks/use-settings";
@@ -87,8 +84,13 @@ const Page: NextPage = () => {
               </div>
               <TextField
                 label="Only Japlanners Enter"
-                onChange={(e) => setPassword(e.target.value)}
-                onKeyDown={(ev) => {
+                onChange={(e: { target: { value: SetStateAction<string> } }) =>
+                  setPassword(e.target.value)
+                }
+                onKeyDown={(ev: {
+                  key: string;
+                  preventDefault: () => void;
+                }) => {
                   if (ev.key === "Enter") {
                     checkPassword();
                     ev.preventDefault();
