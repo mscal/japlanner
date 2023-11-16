@@ -79,30 +79,9 @@ const Page: NextPage = () => {
               />
             </Grid>
 
-            <Grid>
-              {/* <CryptoWallet
-                chartColor={theme.palette.primary.main}
-                chartSeries={[
-                  {
-                    name: "JPY",
-                    data: [
-                      56, 61, 64, 60, 63, 61, 60, 68, 66, 64, 77, 60, 65, 51,
-                      72, 80, 74, 67, 77, 83, 94, 95, 89, 100, 94, 104, 101,
-                      105, 104, 103, 107, 120,
-                    ],
-                  },
-                ]}
-                coinAmount={0.97}
-                currency="JPY"
-                rate={0.56}
-                sx={{ flexBasis: "50%" }}
-                usdValue={16213.2}
-              /> */}
-            </Grid>
-
             <Grid
               xs={12}
-              md={5}
+              md={12}
             >
               <OverviewEvents
                 events={[
@@ -131,6 +110,39 @@ const Page: NextPage = () => {
                       "https://www.google.com/maps/place/HOTEL+RESOL+TRINITY+OSAKA/@34.6896168,135.5013837,17z/data=!3m1!5s0x6000e6e12a31ce99:0xa41c0c78cbb3103d!4m20!1m10!3m9!1s0x6000e72190eccd47:0xbe81402a21214ce7!2sHOTEL+RESOL+TRINITY+OSAKA!5m2!4m1!1i2!8m2!3d34.6896168!4d135.5039586!16s%2Fg%2F11fs_8n5t6!3m8!1s0x6000e72190eccd47:0xbe81402a21214ce7!5m2!4m1!1i2!8m2!3d34.6896168!4d135.5039586!16s%2Fg%2F11fs_8n5t6?entry=ttu",
                   },
                 ]}
+              />
+            </Grid>
+
+            <Grid
+              xs={12}
+              md={4}
+            >
+              <DashboardCards
+                title={"Depature from Japan -> Aus"}
+                main={"2nd December - 8:10pm"}
+                link={""}
+                icon={
+                  <img
+                    src="/assets/japan/icons8-plane.svg"
+                    width={48}
+                  />
+                }
+              />
+            </Grid>
+            <Grid
+              xs={12}
+              md={4}
+            >
+              <DashboardCards
+                title={"Arrival Aus"}
+                main={"3rd December - 6:25am"}
+                link={""}
+                icon={
+                  <img
+                    src="/assets/japan/icons8-plane-land.svg"
+                    width={48}
+                  />
+                }
               />
             </Grid>
           </Grid>

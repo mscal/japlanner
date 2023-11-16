@@ -122,6 +122,7 @@ const Page: NextPage = () => {
             "Sensoji Temple",
             "Eat snacks",
             "Hie Shrine (Optional)",
+            "Kappa-bashi - kitchenware district nearby",
           ],
           subIcons: [
             <img
@@ -324,7 +325,15 @@ const Page: NextPage = () => {
       activities: [
         {
           name: "Disney",
-          subActivities: ["Go to disney", "Have Dinner", "Thats it"],
+          subActivities: [
+            "Purchase breakfast and lunch at the conbini",
+            "After scanning into the park:",
+            "Book 1 ride fast pass (Indiana Jones)",
+            "Get lottery ticket for Big Band show",
+            "If attending at opening, go straight to Soaring",
+            "Lake show at 19:15 - find a spot at least 45 mins before",
+            "Fireworks at 20:30 (5 mins)",
+          ],
         },
       ],
     },
@@ -403,7 +412,9 @@ const Page: NextPage = () => {
           subActivities: [
             "Mt Takao",
             "Shibuya More",
+            "Kichijoji",
             "Thrift Shopping ",
+            "Ochanomizu (music district) ",
             "Spocha",
             "Crane games",
             "Tori-no-ichi festival (night)",
