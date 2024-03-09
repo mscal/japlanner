@@ -294,7 +294,7 @@ const Page: NextPage = () => {
       active: false,
       activities: [
         {
-          name: "Harakuku",
+          name: "Harajuku",
           subActivities: [
             "Takeshita Dori - Famous harajuku shopping street",
             "Cat Street - Less busy harajuku shopping street",
